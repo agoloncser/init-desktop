@@ -18,3 +18,10 @@ script:
   - date
   - uname -a
   - echo $DISTRO $TAG
+
+jobs:
+  exclude:
+    # For each osx_image but one there should be an entry in the exclude
+    # list, to prevent duplicate Linux builds.
+    - os: linux
+      osx_image: xcode10.3

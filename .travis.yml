@@ -6,13 +6,14 @@ os:
 
 env:
   matrix:
+    - DISTRO=fedora TAG=32 # the exclude is based on this one
     - DISTRO=ubuntu TAG=20.04
-    - DISTRO=fedora TAG=32
 
 # https://docs.travis-ci.com/user/reference/osx/#macos-version
 osx_image:
-  - xcode10.3
-  - xcode11.3
+  # - xcode10.1 # latest 10.13
+  # - xcode11.3 # latest 10.14
+  - xcode11.6 # latest 10.15
 
 script:
   - date
@@ -21,17 +22,17 @@ script:
   - if [ $(uname) == "Darwin" ] ; then
     uname -a;
     cd scripts;
-    sh 00_mac.sh;
+    sh 00_mac.sh -n;
     sh 05_python.sh;
     fi
   - if [ $(uname) == "Linux" ] ; then
     uname -a;
-    cd tests && docker build -f Dockerfile_${DISTRO} .;
+    docker build -f Dockerfile_${DISTRO} .;
     fi
 
 jobs:
   exclude:
-    # For each osx_image but one there should be an entry in the exclude
-    # list, to prevent duplicate Linux builds.
+    # For each ENV in the matrix, except the first one add one exclude
+    # job here:
     - os: osx
       ENV: DISTRO=ubuntu TAG=20.04

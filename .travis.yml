@@ -25,3 +25,5 @@ jobs:
     # list, to prevent duplicate Linux builds.
     - os: linux
       osx_image: xcode10.3
+    - os: linux
+      osx_image: xcode11.3

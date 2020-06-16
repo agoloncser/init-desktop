@@ -1,14 +1,20 @@
 language: c
 
 os:
-- linux
-- osx
+  - linux
+  - osx
+
+env:
+  matrix:
+    - DISTRO=ubuntu TAG=20.04
+    - DISTRO=fedora TAG=32
 
 # https://docs.travis-ci.com/user/reference/osx/#macos-version
 osx_image:
-- xcode10.3
-- xcode11.3
+  - xcode10.3
+  - xcode11.3
 
 script:
-    - date
-    - uname -a
+  - date
+  - uname -a
+  - echo $DISTRO $TAG

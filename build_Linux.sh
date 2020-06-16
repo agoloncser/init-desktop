@@ -8,5 +8,7 @@ docker images
 docker ps
 docker run -d --privileged --name travis -v /sys/fs/cgroup:/sys/fs/cgroup:ro travis
 docker ps
-docker exec --tty travis env TERM=vt100 python --version
-docker exec --tty travis env TERM=vt100 ansible --version
+sleep 30
+docker ps
+# docker exec --tty travis env TERM=vt100 python --version
+# docker exec --tty travis env TERM=vt100 ansible --version

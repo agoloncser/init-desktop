@@ -18,6 +18,17 @@ script:
   - date
   - uname -a
   - echo $DISTRO $TAG
+  - if [ $(uname) == "Darwin" ] ; then
+    uname -a
+    cd scripts && {
+    sh 00_mac.sh
+    sh 05_python.sh
+    }
+    fi
+  - if [ $(uname) == "Linux" ] ; then
+    uname -a
+    cd tests && docker build -f Dockerfile_${DISTRO}
+    fi
 
 jobs:
   exclude:

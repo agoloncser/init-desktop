@@ -2,7 +2,7 @@ FROM ${FROM_DISTRO}:${FROM_TAG}
 MAINTAINER https://github.com/agoloncser
 ENV container docker
 
-# Running the scripts
-COPY . /tmp/init
-RUN /tmp/init/scripts/00_fedora.sh
-RUN /tmp/init/scripts/05_python.sh
+# # Running the scripts
+# COPY . /tmp/init
+# RUN /tmp/init/scripts/00_fedora.sh
+# RUN /tmp/init/scripts/05_python.sh

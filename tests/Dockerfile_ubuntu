@@ -1,0 +1,17 @@
+FROM ubuntu:20.04
+MAINTAINER https://github.com/agoloncser
+ENV container docker
+
+ENV LC_ALL C
+ENV DEBIAN_FRONTEND noninteractive
+
+RUN sed -i 's/# deb/deb/g' /etc/apt/sources.list
+
+# pre-install deps
+RUN apt-get update
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y sudo tzdata
+
+# Running the scripts
+COPY ../ /tmp/init
+RUN /tmp/init/scripts/00_ubuntu.sh
+RUN /tmp/init/scripts/05_python.sh

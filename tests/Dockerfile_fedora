@@ -1,0 +1,8 @@
+FROM fedora:32
+MAINTAINER https://github.com/agoloncser
+ENV container docker
+
+# Running the scripts
+COPY ../ /tmp/init
+RUN /tmp/init/scripts/00_fedora.sh
+RUN /tmp/init/scripts/05_python.sh

@@ -1,0 +1,14 @@
+language: c
+
+os:
+- linux
+- osx
+
+# https://docs.travis-ci.com/user/reference/osx/#macos-version
+osx_image:
+- xcode10.3
+- xcode11.3
+
+script:
+    - date
+    - uname -a

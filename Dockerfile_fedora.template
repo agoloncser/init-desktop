@@ -1,4 +1,4 @@
-FROM fedora:32
+FROM ${FROM_DISTRO}:${FROM_TAG}
 MAINTAINER https://github.com/agoloncser
 ENV container docker
 

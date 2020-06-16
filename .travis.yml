@@ -22,4 +22,4 @@ jobs:
     # For each ENV in the matrix, except the first one add one exclude
     # job here:
     - os: osx
-      ENV: DISTRO=ubuntu TAG=20.04
+      ENV: FROM_DISTRO=ubuntu FROM_TAG=20.04

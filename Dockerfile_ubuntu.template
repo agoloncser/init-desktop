@@ -30,8 +30,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y sudo tzdata
 
 # Running the scripts
 COPY . /tmp/init
-RUN /tmp/init/scripts/00_ubuntu.sh
+RUN /tmp/init/scripts/00_ubuntu.sh -n
 RUN /tmp/init/scripts/05_python.sh
-
-VOLUME [ "/sys/fs/cgroup" ]
-CMD ["/lib/systemd/systemd"]
+# Run tests
+RUN /tmp/init/tests/tests.sh

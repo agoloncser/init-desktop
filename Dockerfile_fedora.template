@@ -15,10 +15,9 @@ rm -f /lib/systemd/system/sockets.target.wants/*initctl*; \
 rm -f /lib/systemd/system/basic.target.wants/*;\
 rm -f /lib/systemd/system/anaconda.target.wants/*;
 
-# Running the scripts
+# Run the init scripts
 COPY . /tmp/init
 RUN /tmp/init/scripts/00_fedora.sh -n
 RUN /tmp/init/scripts/05_python.sh
-
-VOLUME [ "/sys/fs/cgroup" ]
-CMD ["/usr/sbin/init"]
+# Run tests
+RUN /tmp/init/tests/tests.sh

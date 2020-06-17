@@ -1,10 +1,6 @@
-#!/bin/sh
+#!/bin/bash
 set -o errexit
 set -xv
-
-cd scripts && {
-    sh 00_mac.sh -n
-    sh 05_python.sh
-}
-python --version
-ansible --version
+sh scripts/00_mac.sh -n
+sh scripts/05_python.sh
+sh tests/tests.sh

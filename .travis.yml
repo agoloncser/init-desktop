@@ -20,6 +20,9 @@ osx_image:
 script: ./build_$(uname).sh
 
 jobs:
+  allow_failures:
+    - os: linux
+      ENV: FROM_DISTRO=fedora FROM_TAG=33
   exclude:
     # For each ENV in the matrix, except the first one add one exclude
     # job here:

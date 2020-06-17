@@ -8,7 +8,7 @@ docker ps -a
 docker run -d --privileged --name travis -v /sys/fs/cgroup:/sys/fs/cgroup:ro travis
 sleep 2
 docker ps -a
-docker exec --tty travis env TERM=vt100 id
-docker exec --tty travis env TERM=vt100 cat ~/.bashrc
-docker exec --tty travis env TERM=vt100 python --version
-docker exec --tty travis env TERM=vt100 ansible --version
+docker exec -u root --tty travis env TERM=vt100 id
+docker exec -u root --tty travis env TERM=vt100 cat ~/.bashrc
+docker exec -u root --tty travis env TERM=vt100 python --version
+docker exec -u root --tty travis env TERM=vt100 ansible --version

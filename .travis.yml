@@ -7,7 +7,7 @@ os:
 env:
   matrix:
     - FROM_DISTRO=fedora FROM_TAG=32 # the exclude is based on this one
-    - FROM_DISTRO=ubuntu FROM_TAG=20.04
+    # - FROM_DISTRO=ubuntu FROM_TAG=20.04
 
 # https://docs.travis-ci.com/user/reference/osx/#macos-version
 osx_image:

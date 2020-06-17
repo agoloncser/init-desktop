@@ -17,8 +17,9 @@ rm -f /lib/systemd/system/anaconda.target.wants/*;
 
 # Running the scripts
 COPY . /tmp/init
-RUN /tmp/init/scripts/00_fedora.sh
+RUN /tmp/init/scripts/00_fedora.sh -n
 RUN /tmp/init/scripts/05_python.sh
+RUN id
 
 VOLUME [ "/sys/fs/cgroup" ]
 CMD ["/usr/sbin/init"]

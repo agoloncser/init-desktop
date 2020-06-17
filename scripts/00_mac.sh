@@ -20,4 +20,4 @@ brew update
 if [ -z "$flag_n" ] ; then
     brew upgrade
 fi
-brew install git
+brew install git || brew upgrade git

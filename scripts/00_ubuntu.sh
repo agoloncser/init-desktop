@@ -15,4 +15,4 @@ if [ -z "$flag_n" ] ; then
 fi
 sudo apt-get install -y git network-manager-openvpn
 # pyenv
-sudo apt-get install -y git libssl-dev libreadline-dev libbz2-dev libsqlite3-dev libffi-dev curl build-essential
+sudo apt-get install -y git libssl-dev libreadline-dev libbz2-dev libsqlite3-dev libffi-dev curl build-essential zlib1g-dev

@@ -23,6 +23,8 @@ jobs:
   allow_failures:
     - os: linux
       ENV: FROM_DISTRO=fedora FROM_TAG=33
+    - os: linux
+      ENV: FROM_DISTRO=ubuntu FROM_TAG=20.10
   exclude:
     # For each ENV in the matrix, except the first one add one exclude
     # job here:

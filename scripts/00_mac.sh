@@ -20,4 +20,9 @@ brew update
 if [ -z "$flag_n" ] ; then
     brew upgrade
 fi
+
+# packages
 brew install git || brew upgrade git
+
+# pyenv
+brew install openssl readline sqlite3 xz zlib

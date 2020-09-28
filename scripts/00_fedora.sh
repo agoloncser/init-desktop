@@ -13,6 +13,8 @@ if [ -z "$flag_n" ] ; then
     sudo dnf update -y
     sudo dnf upgrade -y
 fi
+
+# packages
 sudo dnf install -y git
 
 # pyenv

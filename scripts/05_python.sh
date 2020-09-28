@@ -26,4 +26,4 @@ done
 eval "$(pyenv init -)"
 pip
 pip install --upgrade pip
-pip install ansible
+pip install pipenv

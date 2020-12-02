@@ -2,7 +2,7 @@
 set -o errexit
 set -xv
 
-DESKTOP_PYTHON_VERSION=3.8.3
+DESKTOP_PYTHON_VERSION=3.8.6
 DIR_PYENV=~/.pyenv
 
 git clone https://github.com/pyenv/pyenv.git $DIR_PYENV || echo "Already checked out"

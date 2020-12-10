@@ -24,6 +24,5 @@ for i in ~/.zshrc ~/.bashrc ; do
 done
 
 eval "$(pyenv init -)"
-pip
 pip install --upgrade pip
 pip install pipenv

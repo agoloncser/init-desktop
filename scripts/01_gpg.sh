@@ -41,16 +41,3 @@ card-timeout 30
 reader-port "Yubico YubiKey OTP+FIDO+CCID 01 00"
 disable-ccid
 EOF
-
-case $(uname) in
-    Linux)
-        case $(lsb_release -is) in
-            Fedora) SYSTEM=Redhat ;;
-            Ubuntu) SYSTEM=Debian ;;
-            Debian) SYSTEM=Debian ;;
-            *) exit 1;;
-        esac
-        ;;
-    Darwin) SYSTEM=Darwin;;
-    *) exit 1;;
-esac

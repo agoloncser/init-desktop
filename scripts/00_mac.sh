@@ -1,28 +1,16 @@
 #!/bin/sh
 set -o errexit
-set -xv
-flag_n=
-while getopts n options
-do
-    case $options in
-        n) flag_n=1 ;;
-    esac
-done
 
 # installing homebrew
 if [ ! -x /usr/local/bin/brew ] ; then
-    yes|/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 else
     echo Already installed
 fi
-set -xv
+
 brew update
-if [ -z "$flag_n" ] ; then
-    brew upgrade
-fi
-
-# packages
-brew install git || brew upgrade git
-
-# pyenv
-brew install openssl readline sqlite3 xz zlib
+brew upgrade
+brew install git
+brew install ansible
+brew install gnupg
+brew install curl

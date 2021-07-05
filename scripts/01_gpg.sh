@@ -2,10 +2,10 @@
 
 DIR_GPG=$HOME/.gnupg
 
-mkdir $DIR_GPG 2>/dev/null
-chmod 0700 $DIR_GPG
+mkdir "$DIR_GPG" 2>/dev/null
+chmod 0700 "$DIR_GPG"
 
-cat <<EOF > ${DIR_GPG}/gpg.conf
+cat <<EOF > "${DIR_GPG}/gpg.conf"
 personal-cipher-preferences AES256 AES192 AES
 personal-digest-preferences SHA512 SHA384 SHA256
 personal-compress-preferences ZLIB BZIP2 ZIP Uncompressed
@@ -26,7 +26,7 @@ no-symkey-cache
 use-agent
 EOF
 
-cat <<EOF > ${DIR_GPG}/gpg-agent.conf
+cat <<EOF > "${DIR_GPG}/gpg-agent.conf"
 enable-ssh-support
 default-cache-ttl 10
 max-cache-ttl 10
@@ -34,7 +34,7 @@ max-cache-ttl 10
 max-cache-ttl-ssh 10
 EOF
 
-cat <<EOF > ${DIR_GPG}/scdaemon.conf
+cat <<EOF > "${DIR_GPG}/scdaemon.conf"
 #log-file /home/agl/scdaemon.log
 #debug-all
 card-timeout 30

@@ -10,4 +10,4 @@ fi
 
 brew update
 brew upgrade
-brew install git ansible gnupg curl
+brew install git ansible gnupg curl pass

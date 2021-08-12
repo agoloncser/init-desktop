@@ -7,6 +7,6 @@ pkg install -y gnome3-lite xorg
 cat <<EOF >> /etc/fstab
 proc           /proc       procfs  rw  0   0
 EOF
-sysctl dbus_enable="YES"
-sysctl gdm_enable="YES"
-sysctl gnome_enable="YES"
+sysrc dbus_enable="YES"
+sysrc gdm_enable="YES"
+sysrc gnome_enable="YES"

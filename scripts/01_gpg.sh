@@ -38,6 +38,6 @@ cat <<EOF > "${DIR_GPG}/scdaemon.conf"
 #log-file /home/agl/scdaemon.log
 #debug-all
 card-timeout 30
-reader-port "Yubico YubiKey OTP+FIDO+CCID 01 00"
+reader-port Yubico YubiKey
 disable-ccid
 EOF

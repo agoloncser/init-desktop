@@ -2,6 +2,6 @@
 set -o errexit
 sudo apt update -y
 sudo apt upgrade -y
-sudo apt-get install -y git python3 curl ansible gnupg2 pass tmux pipenv scdaemon pcscd
+sudo apt-get install -y git python3 curl ansible gnupg2 pass tmux pipenv scdaemon pcscd xz-utils
 sudo systemctl enable pcscd
 sudo systemctl start pcscd

@@ -10,4 +10,4 @@ fi
 
 brew update
 brew upgrade
-brew install git ansible gnupg curl pass tmux openssh xz
+brew install git ansible gnupg curl pass tmux openssh xz rsync

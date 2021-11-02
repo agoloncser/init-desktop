@@ -1,5 +1,14 @@
 # Changelog
 
+### [0.4.3](https://www.github.com/agoloncser/desktop-init-scripts/compare/v0.4.2...v0.4.3) (2021-10-28)
+
+
+### Bug Fixes
+
+* Add rsync ([3557aec](https://www.github.com/agoloncser/desktop-init-scripts/commit/3557aec8cc9dad034e5e60942bafd7a478992af6))
+* Remove FreeBSD support ([d680acd](https://www.github.com/agoloncser/desktop-init-scripts/commit/d680acd6ec96378c71d312c048cebbdef593dc03))
+* Rename directory ([0d4629c](https://www.github.com/agoloncser/desktop-init-scripts/commit/0d4629c336faae62324b9c7998028028649ce4c9))
+
 ### [0.4.2](https://www.github.com/agoloncser/desktop-init-scripts/compare/v0.4.1...v0.4.2) (2021-10-08)
 
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.0](https://www.github.com/agoloncser/desktop-init-scripts/compare/v0.4.3...v0.5.0) (2021-11-16)
+
+
+### Features
+
+* Add pass-otp ([0b72f76](https://www.github.com/agoloncser/desktop-init-scripts/commit/0b72f76417e817ddf9c4961e551fdf478700bb8c))
+
 ### [0.4.3](https://www.github.com/agoloncser/desktop-init-scripts/compare/v0.4.2...v0.4.3) (2021-10-28)
 
 

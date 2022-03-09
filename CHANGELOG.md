@@ -1,5 +1,13 @@
 # Changelog
 
+### [0.5.1](https://www.github.com/agoloncser/desktop-init-scripts/compare/v0.5.0...v0.5.1) (2022-03-09)
+
+
+### Bug Fixes
+
+* Add fish shell on linuxes ([5843188](https://www.github.com/agoloncser/desktop-init-scripts/commit/5843188a30455a4d6a8c8e70877fc3dde4718975))
+* Add fish shell on macOS ([ed3d207](https://www.github.com/agoloncser/desktop-init-scripts/commit/ed3d20747e20d8c18cb06c88d6d7050047f4abbe))
+
 ## [0.5.0](https://www.github.com/agoloncser/desktop-init-scripts/compare/v0.4.3...v0.5.0) (2021-11-16)
 
 

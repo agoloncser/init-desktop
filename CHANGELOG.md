@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.0](https://www.github.com/agoloncser/desktop-init-scripts/compare/v0.5.1...v0.6.0) (2022-03-25)
+
+
+### Features
+
+* Install homebrew locally ([0491e31](https://www.github.com/agoloncser/desktop-init-scripts/commit/0491e31e6d27adbde265f05797a3cfa377092436))
+
 ### [0.5.1](https://www.github.com/agoloncser/desktop-init-scripts/compare/v0.5.0...v0.5.1) (2022-03-09)
 
 

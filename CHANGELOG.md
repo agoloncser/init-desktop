@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.6.1](https://www.github.com/agoloncser/desktop-init-scripts/compare/v0.6.0...v0.6.1) (2022-04-24)
+
+
+### Bug Fixes
+
+* Add wl-clipboard ([3522b66](https://www.github.com/agoloncser/desktop-init-scripts/commit/3522b664bbb348f02fe5a7a4748fbff085fc9c53))
+
 ## [0.6.0](https://www.github.com/agoloncser/desktop-init-scripts/compare/v0.5.1...v0.6.0) (2022-04-05)
 
 

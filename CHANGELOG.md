@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.6.2](https://www.github.com/agoloncser/desktop-init-scripts/compare/v0.6.1...v0.6.2) (2022-04-25)
+
+
+### Bug Fixes
+
+* Update packages ([0a10a57](https://www.github.com/agoloncser/desktop-init-scripts/commit/0a10a5766ec23c777d046008215c31b612039152))
+
 ### [0.6.1](https://www.github.com/agoloncser/desktop-init-scripts/compare/v0.6.0...v0.6.1) (2022-04-24)
 
 

@@ -10,4 +10,4 @@ fi
 
 brew update
 brew upgrade
-brew install git ansible gnupg curl pass tmux openssh xz rsync pass pass-otp mas fish
+brew install git ansible gnupg curl pass tmux openssh xz rsync pass pass-otp mas fish pipenv

@@ -1,5 +1,5 @@
 #!/bin/sh
-set -o errexit
+set -euxv
 
 dir="$HOME/.homebrew"
 

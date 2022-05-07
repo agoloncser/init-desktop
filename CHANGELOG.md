@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.7.0](https://www.github.com/agoloncser/desktop-init-scripts/compare/v0.6.2...v0.7.0) (2022-05-07)
+
+
+### Features
+
+* Caps script ([a2c9472](https://www.github.com/agoloncser/desktop-init-scripts/commit/a2c9472d0aee10c5ff2a179cc1c0afcada5c5c78))
+
+
+### Bug Fixes
+
+* Install pipenv on macos ([027257d](https://www.github.com/agoloncser/desktop-init-scripts/commit/027257d6955c78d7622d9492e26cdc702959c624))
+* Update scripts and install pipenv ([c57cded](https://www.github.com/agoloncser/desktop-init-scripts/commit/c57cdedac811316fea6e17086b3c3a47f514ec8b))
+
 ### [0.6.2](https://www.github.com/agoloncser/desktop-init-scripts/compare/v0.6.1...v0.6.2) (2022-04-25)
 
 

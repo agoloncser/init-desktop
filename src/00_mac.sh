@@ -1,5 +1,5 @@
 #!/bin/sh
-set -o errexit
+set -euxv
 
 # installing homebrew
 if [ ! -x /usr/local/bin/brew ] ; then

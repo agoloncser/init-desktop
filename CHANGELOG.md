@@ -1,5 +1,48 @@
 # Changelog
 
+## [0.7.0](https://www.github.com/agoloncser/desktop-init-scripts/compare/v0.6.2...v0.7.0) (2022-05-07)
+
+
+### Features
+
+* Caps script ([a2c9472](https://www.github.com/agoloncser/desktop-init-scripts/commit/a2c9472d0aee10c5ff2a179cc1c0afcada5c5c78))
+
+
+### Bug Fixes
+
+* Install pipenv on macos ([027257d](https://www.github.com/agoloncser/desktop-init-scripts/commit/027257d6955c78d7622d9492e26cdc702959c624))
+* Update scripts and install pipenv ([c57cded](https://www.github.com/agoloncser/desktop-init-scripts/commit/c57cdedac811316fea6e17086b3c3a47f514ec8b))
+
+### [0.6.2](https://www.github.com/agoloncser/desktop-init-scripts/compare/v0.6.1...v0.6.2) (2022-04-25)
+
+
+### Bug Fixes
+
+* Update packages ([0a10a57](https://www.github.com/agoloncser/desktop-init-scripts/commit/0a10a5766ec23c777d046008215c31b612039152))
+
+### [0.6.1](https://www.github.com/agoloncser/desktop-init-scripts/compare/v0.6.0...v0.6.1) (2022-04-24)
+
+
+### Bug Fixes
+
+* Add wl-clipboard ([3522b66](https://www.github.com/agoloncser/desktop-init-scripts/commit/3522b664bbb348f02fe5a7a4748fbff085fc9c53))
+
+## [0.6.0](https://www.github.com/agoloncser/desktop-init-scripts/compare/v0.5.1...v0.6.0) (2022-04-05)
+
+
+### Features
+
+* Add ssh key generator script ([db7bf92](https://www.github.com/agoloncser/desktop-init-scripts/commit/db7bf9267a808d268dc077c8963890e09087d564))
+* Install homebrew locally ([0491e31](https://www.github.com/agoloncser/desktop-init-scripts/commit/0491e31e6d27adbde265f05797a3cfa377092436))
+
+### [0.5.1](https://www.github.com/agoloncser/desktop-init-scripts/compare/v0.5.0...v0.5.1) (2022-03-09)
+
+
+### Bug Fixes
+
+* Add fish shell on linuxes ([5843188](https://www.github.com/agoloncser/desktop-init-scripts/commit/5843188a30455a4d6a8c8e70877fc3dde4718975))
+* Add fish shell on macOS ([ed3d207](https://www.github.com/agoloncser/desktop-init-scripts/commit/ed3d20747e20d8c18cb06c88d6d7050047f4abbe))
+
 ## [0.5.0](https://www.github.com/agoloncser/desktop-init-scripts/compare/v0.4.3...v0.5.0) (2021-11-16)
 
 

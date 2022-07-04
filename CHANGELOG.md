@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.7.1](https://www.github.com/agoloncser/desktop-init-scripts/compare/v0.7.0...v0.7.1) (2022-06-24)
+
+
+### Bug Fixes
+
+* Ubuntu enable repos ([edd82df](https://www.github.com/agoloncser/desktop-init-scripts/commit/edd82dfcc35702dc34dcebb0163099726212fbb2))
+
 ## [0.7.0](https://www.github.com/agoloncser/desktop-init-scripts/compare/v0.6.2...v0.7.0) (2022-05-07)
 
 

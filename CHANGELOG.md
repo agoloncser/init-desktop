@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.8.0](https://www.github.com/agoloncser/desktop-init-scripts/compare/v0.7.1...v0.8.0) (2022-07-19)
+
+
+### Features
+
+* Add asdf init scripts ([83d7078](https://www.github.com/agoloncser/desktop-init-scripts/commit/83d7078d02366fa5eba8bbf273c321b28c929f0e))
+
+
+### Bug Fixes
+
+* Minor script fixes ([a0d32de](https://www.github.com/agoloncser/desktop-init-scripts/commit/a0d32defa095ac69b30b872418579c2b401646d4))
+
 ### [0.7.1](https://www.github.com/agoloncser/desktop-init-scripts/compare/v0.7.0...v0.7.1) (2022-06-24)
 
 

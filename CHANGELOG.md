@@ -1,5 +1,18 @@
 # Changelog
 
+### [0.8.1](https://www.github.com/agoloncser/desktop-init-scripts/compare/v0.8.0...v0.8.1) (2022-08-30)
+
+
+### Bug Fixes
+
+* Add date generated to ssh pubkey comment ([235508a](https://www.github.com/agoloncser/desktop-init-scripts/commit/235508a5ee4ef846453fe46111a7481834296bd6))
+* Add help and minor fixes ([aa5b14d](https://www.github.com/agoloncser/desktop-init-scripts/commit/aa5b14dd117b85c890ca3a4fef2bb47613e0bd48))
+* Automatically create key ([d615b4c](https://www.github.com/agoloncser/desktop-init-scripts/commit/d615b4c43a8e7b4fd1b5f8e890b41a0bc321417c))
+* Do not store pubkey in pass ([bfe1cae](https://www.github.com/agoloncser/desktop-init-scripts/commit/bfe1cae87ec4ef30826312e838cbfb2b78f319e6))
+* Fix key creation ([bc40de7](https://www.github.com/agoloncser/desktop-init-scripts/commit/bc40de794734e42f873ff6b381c3e62c1560fb95))
+* Force generate passphrase on each key generation ([8ad71dc](https://www.github.com/agoloncser/desktop-init-scripts/commit/8ad71dcfa5771b2a8fe52267bb7d4859e50546a1))
+* Store pubkey in pass as well ([db914bc](https://www.github.com/agoloncser/desktop-init-scripts/commit/db914bcc55e0e1fefbc458192a7664e16ef75cd9))
+
 ## [0.8.0](https://www.github.com/agoloncser/desktop-init-scripts/compare/v0.7.1...v0.8.0) (2022-07-19)
 
 

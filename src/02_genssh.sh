@@ -26,10 +26,9 @@ MY_HOSTNAME=$(hostname | perl -F'\.' -lane 'print $F[0]')
 KEYNAME="ed25519-${key_usage}-${MY_HOSTNAME}-${USER}"
 PASSPHRASE_LOCATION="ssh/${KEYNAME}/passphrase"
 
-pass -c "${PASSPHRASE_LOCATION}" || {
-    pass generate --no-symbols "${PASSPHRASE_LOCATION}" "$passphrase_lenght"
-    pass -c "${PASSPHRASE_LOCATION}"
-}
+
+pass generate --no-symbols "${PASSPHRASE_LOCATION}" "$passphrase_lenght"
+pass -c "${PASSPHRASE_LOCATION}"
 
 mkdir -p "$HOME/.ssh" || true
 chmod 0700 "$HOME/.ssh"

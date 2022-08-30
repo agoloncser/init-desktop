@@ -27,12 +27,9 @@ KEYNAME="ed25519-${key_usage}-${MY_HOSTNAME}-${USER}"
 PASSPHRASE_LOCATION="ssh/${KEYNAME}/passphrase"
 PUBKEY_LOCATION="ssh/${KEYNAME}/pubkey"
 
-
 pass generate --no-symbols "${PASSPHRASE_LOCATION}" "$passphrase_lenght"
-pass -c "${PASSPHRASE_LOCATION}"
-
 mkdir -p "$HOME/.ssh" || true
 chmod 0700 "$HOME/.ssh"
-ssh-keygen -t ed25519 -C "[$KEYNAME $(date +%Y%m%d)]" -f "$HOME/.ssh/${KEYNAME}"
+ssh-keygen -t ed25519 -C "[$KEYNAME-$(date +%Y%m%d-%H%M%S)]" -f "$HOME/.ssh/${KEYNAME}" -P "${PASSPHRASE_LOCATION}"
 cat "$HOME/.ssh/${KEYNAME}.pub" | pass insert -m "$PUBKEY_LOCATION"
 cat "$HOME/.ssh/${KEYNAME}.pub"

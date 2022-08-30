@@ -1,7 +1,5 @@
 #!/bin/sh
 
-set -xv
-
 while getopts l:k: options
 do
     case $options in
@@ -39,6 +37,7 @@ PUBKEY_LOCATION="ssh/${KEYNAME}/pubkey"
 pass generate --no-symbols "${PASSPHRASE_LOCATION}" "$passphrase_length"
 mkdir -p "$HOME/.ssh" || true
 chmod 0700 "$HOME/.ssh"
+echo 'Touch the device...'
 ssh-keygen -t ed25519 -C "[${KEYNAME}-$(date +%Y%m%d-%H%M%S)]" -f "$HOME/.ssh/${KEYNAME}" -P "$(pass "${PASSPHRASE_LOCATION}")"
 cat "$HOME/.ssh/${KEYNAME}.pub" | pass insert -m "$PUBKEY_LOCATION"
 cat "$HOME/.ssh/${KEYNAME}.pub"

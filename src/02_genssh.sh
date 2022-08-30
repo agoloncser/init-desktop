@@ -33,5 +33,5 @@ pass -c "${PASSPHRASE_LOCATION}" || {
 
 mkdir -p "$HOME/.ssh" || true
 chmod 0700 "$HOME/.ssh"
-ssh-keygen -t ed25519 -C "$KEYNAME" -f "$HOME/.ssh/${KEYNAME}"
+ssh-keygen -t ed25519 -C "[$KEYNAME $(date +%Y%m%d)]" -f "$HOME/.ssh/${KEYNAME}"
 cat "$HOME/.ssh/${KEYNAME}.pub"

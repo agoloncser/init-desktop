@@ -16,7 +16,7 @@ freebsd-update fetch --not-running-from-cron
 #
 export ASSUME_ALWAYS_YES=YES
 pkg update -f
-pkg install -y mosh tmux fish python39 ca_root_nss fzf rsync starship curl jq cmdwatch
+pkg install -y mosh tmux fish python39 ca_root_nss fzf rsync starship curl jq cmdwatch smartmontools
 
 #
 # sshd setup

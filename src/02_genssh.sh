@@ -15,6 +15,12 @@ cat <<EOF
 -l INT .... passphrase length (e.g. '64')
 -k NAME ... name the usage  (e.g. 'github')
 
+Only ED25519 keys are supported.
+
+Example for host-based key generation, store private key only locally.
+
+    $0 -l 64 -k github
+
 EOF
 exit 1
 }

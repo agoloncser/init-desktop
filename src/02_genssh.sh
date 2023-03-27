@@ -2,7 +2,7 @@
 
 flag_H=""
 flag_U=""
-while getopts l:k:d:HUB options
+while getopts l:k:d:HUB: options
 do
     case $options in
         k) key_usage=$OPTARG ;;

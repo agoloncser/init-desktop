@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.9.1](https://www.github.com/agoloncser/desktop-init-scripts/compare/v0.9.0...v0.9.1) (2023-03-21)
+
+
+### Bug Fixes
+
+* Add gconf2 package to Ubuntu ([15500d2](https://www.github.com/agoloncser/desktop-init-scripts/commit/15500d25810d62e2e2a35a9755d6f08d4c6323cc))
+
 ## [0.9.0](https://www.github.com/agoloncser/desktop-init-scripts/compare/v0.8.0...v0.9.0) (2022-09-07)
 
 

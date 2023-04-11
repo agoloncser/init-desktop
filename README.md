@@ -1,5 +1,19 @@
 # Desktop init scripts
 
+## Environment
+
+By default the below scripts upgrade the nodes as well. However there are circumstances that this is not required. In this cases use the following environment variable:
+
+```shell
+export DESKTOP_INIT_SKIP_UPGRADE=1
+```
+
+or when using `fish` shell:
+
+```shell
+set -xg DESKTOP_INIT_SKIP_UPGRADE 1
+```
+
 ## Setup OS
 
 Ubuntu

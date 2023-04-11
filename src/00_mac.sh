@@ -9,5 +9,7 @@ else
 fi
 
 brew update
-brew upgrade
+if [ -z "$DESKTOP_INIT_SKIP_UPGRADE" ] ; then
+    brew upgrade
+fi
 brew install git ansible gnupg curl pass tmux openssh xz rsync pass pass-otp mas fish pipenv

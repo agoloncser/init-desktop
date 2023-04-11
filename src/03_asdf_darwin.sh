@@ -2,7 +2,7 @@
 
 set -eu
 
-ASDF_VERSION="v0.10.2"
+ASDF_VERSION="v0.11.3"
 ASDF_BIN=~/.asdf/asdf.sh
 
 brew install curl git

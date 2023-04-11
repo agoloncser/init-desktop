@@ -25,7 +25,7 @@ curl -fsSL https://raw.githubusercontent.com/agoloncser/desktop-init-scripts/mas
 macOS
 
 ```shell
-curl -fsSL https://raw.githubusercontent.com/agoloncser/desktop-init-scripts/master/src/00_mac.sh | sh -xv
+curl -fsSL https://raw.githubusercontent.com/agoloncser/desktop-init-scripts/master/src/00_darwin.sh | sh -xv
 ```
 
 Fedora

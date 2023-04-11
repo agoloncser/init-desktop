@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -eu
+
 flag_H=""
 flag_U=""
 while getopts l:k:d:HUB: options

@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -eu
+
 # see
 # https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints
 

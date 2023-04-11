@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -euxv
+
 GNUPGHOME=${GNUPGHOME:="${HOME}/.gnupg"}
 
 mkdir "$GNUPGHOME" 2>/dev/null

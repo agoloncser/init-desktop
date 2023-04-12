@@ -4,6 +4,8 @@ set -eu
 
 flag_H=""
 flag_U=""
+key_usage=""
+passphrase_length="64"
 while getopts l:k:d:HUB: options
 do
     case $options in

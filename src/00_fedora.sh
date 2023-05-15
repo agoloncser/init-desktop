@@ -1,6 +1,8 @@
 #!/bin/sh
 set -euxv
 
+DESKTOP_INIT_SKIP_UPGRADE=${DESKTOP_INIT_SKIP_UPGRADE:=""}
+
 if [ -z "$DESKTOP_INIT_SKIP_UPGRADE" ] ; then
     sudo dnf upgrade -y
 fi

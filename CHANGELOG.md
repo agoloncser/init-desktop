@@ -1,5 +1,24 @@
 # Changelog
 
+## [0.10.0](https://www.github.com/agoloncser/desktop-init-scripts/compare/v0.9.1...v0.10.0) (2023-04-14)
+
+
+### Features
+
+* Add CA support in genkey ([7bd159a](https://www.github.com/agoloncser/desktop-init-scripts/commit/7bd159a3eed9098becdca9cdbcecf53617b87ba0))
+* **genssh:** Add pubkey to pass, control pass location ([162b217](https://www.github.com/agoloncser/desktop-init-scripts/commit/162b217a73f90913bf4416959dac7cbab58635a9))
+* **genssh:** Add support for directory and key customization ([4b4b924](https://www.github.com/agoloncser/desktop-init-scripts/commit/4b4b924086bef292314157de4060e37aad6087df))
+* Makefile ([87b4aa9](https://www.github.com/agoloncser/desktop-init-scripts/commit/87b4aa9bedb31cf84015c160269e722b42e7cc03))
+* Skip upgrade ([2eb7a40](https://www.github.com/agoloncser/desktop-init-scripts/commit/2eb7a404ac9fcc8e281588d98f35640d9cee0860))
+* Trust github, add hostkeys ([de876ee](https://www.github.com/agoloncser/desktop-init-scripts/commit/de876ee062a404a3b0f280042b75f641252856d8))
+
+
+### Bug Fixes
+
+* Fix unbound variable issues ([024cdb3](https://www.github.com/agoloncser/desktop-init-scripts/commit/024cdb3afd449e185efdad92cf3b5e0ff72f96de))
+* rename script to darwin ([32ac7bf](https://www.github.com/agoloncser/desktop-init-scripts/commit/32ac7bfcc98930befab8931ae710e0a2be6bdec1))
+* Upgrade asdf version ([28dfa80](https://www.github.com/agoloncser/desktop-init-scripts/commit/28dfa80d52209c5a6482c504757bda50fce2f296))
+
 ### [0.9.1](https://www.github.com/agoloncser/desktop-init-scripts/compare/v0.9.0...v0.9.1) (2023-03-21)
 
 

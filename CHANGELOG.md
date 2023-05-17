@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.11.0](https://www.github.com/agoloncser/desktop-init-scripts/compare/v0.10.0...v0.11.0) (2023-05-17)
+
+
+### Features
+
+* Revert FreeBSD support ([9354958](https://www.github.com/agoloncser/desktop-init-scripts/commit/935495865f56730cb670d5d028b29b80dc19e32f))
+
+
+### Bug Fixes
+
+* Fix package list ([9fd73d9](https://www.github.com/agoloncser/desktop-init-scripts/commit/9fd73d96cc454b52011bcfe0aa2e19eb27f3b84e))
+* **genssh:** Add NO_PASSPHRASE option, help and clarify variables ([3616e37](https://www.github.com/agoloncser/desktop-init-scripts/commit/3616e370e6c60be09d64e1c3a49ab5ecc09da0e8))
+* **genssh:** Add NO_PUBKEY_IN_PASS ([36aa483](https://www.github.com/agoloncser/desktop-init-scripts/commit/36aa483caeb5abc55ed1d7ee3980ea32909dcf1c))
+* Option to skip upgrade ([ca728f4](https://www.github.com/agoloncser/desktop-init-scripts/commit/ca728f43e5c6a9ab5ea35907e5ca9361b2a4333c))
+
 ## [0.10.0](https://www.github.com/agoloncser/desktop-init-scripts/compare/v0.9.1...v0.10.0) (2023-04-14)
 
 

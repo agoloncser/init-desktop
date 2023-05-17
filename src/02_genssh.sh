@@ -7,7 +7,9 @@ NO_USERNAME=""
 key_usage=""
 passphrase_length="64"
 NO_PASSPHRASE=""
-while getopts P:l:k:d:HUB:C: options
+CA_NAME=""
+NO_PUBKEY_IN_PASS=""
+while getopts NPl:k:d:HUB:C: options
 do
     case $options in
         k) key_usage=$OPTARG ;;
@@ -18,6 +20,7 @@ do
         B) PASS_BASE_DIRECTORY=$OPTARG ;;
         C) CA_NAME=$OPTARG ;;
         P) NO_PASSPHRASE=1 ;;
+        N) NO_PUBKEY_IN_PASS=1 ;;
         *) echo "Invalid options" ; exit 1
     esac
 done
@@ -25,7 +28,7 @@ done
 _help(){
 cat <<EOF
 
--l INT .... passphrase length (e.g. '64')
+-l INT .... passphrase length (default: '64')
 -k NAME ... name the usage  (e.g. 'github')
 -d DIR .... directory to save the key (optional, default; '$HOME/.ssh')
 -C CA ..... name of the CA to use (optional)
@@ -33,6 +36,7 @@ cat <<EOF
 -U ........ do not add current username to key name (optional)
 -B ........ set base directory in pass where to store the pubkey (optional)
 -P ........ do not create a key passphrase in pass but request interactively (optional)
+-N ........ do not save pubkey into pass (optional)
 
 Only ED25519 keys are supported.
 
@@ -85,7 +89,10 @@ if [ -z "$NO_PASSPHRASE" ] ; then
 else
     ssh-keygen -t ed25519 -C "$KEY_COMMENT" -f "${key_directory}/${KEYNAME}"
 fi
-pass insert -m "$PUBKEY_LOCATION" < "${key_directory}/${KEYNAME}.pub"
+
+if [ -z "$NO_PUBKEY_IN_PASS" ] ; then
+    pass insert -m "$PUBKEY_LOCATION" < "${key_directory}/${KEYNAME}.pub"
+fi
 
 echo
 cat "${key_directory}/${KEYNAME}.pub"

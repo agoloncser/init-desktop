@@ -7,9 +7,8 @@ NO_USERNAME=""
 key_usage=""
 passphrase_length="64"
 NO_PASSPHRASE=""
-CA_NAME=""
 NO_PUBKEY_IN_PASS=""
-while getopts NPl:k:d:HUB:C: options
+while getopts NPl:k:d:HUB: options
 do
     case $options in
         k) key_usage=$OPTARG ;;
@@ -18,7 +17,6 @@ do
         H) NO_HOSTNAME=1 ;;
         U) NO_USERNAME=1 ;;
         B) PASS_BASE_DIRECTORY=$OPTARG ;;
-        C) CA_NAME=$OPTARG ;;
         P) NO_PASSPHRASE=1 ;;
         N) NO_PUBKEY_IN_PASS=1 ;;
         *) echo "Invalid options" ; exit 1
@@ -31,7 +29,6 @@ cat <<EOF
 -l INT .... passphrase length (default: '64')
 -k NAME ... name the usage  (e.g. 'github')
 -d DIR .... directory to save the key (optional, default; '$HOME/.ssh')
--C CA ..... name of the CA to use (optional)
 -H ........ do not add current hostname to key name (optional)
 -U ........ do not add current username to key name (optional)
 -B ........ set base directory in pass where to store the pubkey (optional)
@@ -69,11 +66,7 @@ fi
 
 PASSPHRASE_LOCATION="${PASS_BASE_DIRECTORY}/${KEYNAME}/passphrase"
 PUBKEY_LOCATION="${PASS_BASE_DIRECTORY}/${KEYNAME}/pubkey"
-
 KEY_COMMENT="name:${key_usage} created:$(date +%Y%m%d-%H%M%S)"
-if [ -n "$CA_NAME" ] ; then
-    KEY_COMMENT="name:${key_usage} created:$(date +%Y%m%d-%H%M%S) ca:$CA_NAME"
-fi
 
 # this is optional so we can give a default
 key_directory=${key_directory:="${HOME}/.ssh/"}

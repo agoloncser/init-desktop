@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.12.0](https://www.github.com/agoloncser/desktop-init-scripts/compare/v0.11.0...v0.12.0) (2023-05-19)
+
+
+### Features
+
+* **genssh:** Remove support for adding CA name to pubkey ([a4253f8](https://www.github.com/agoloncser/desktop-init-scripts/commit/a4253f8a49060f7115ed934e2720680bd8c15328))
+
 ## [0.11.0](https://www.github.com/agoloncser/desktop-init-scripts/compare/v0.10.0...v0.11.0) (2023-05-17)
 
 

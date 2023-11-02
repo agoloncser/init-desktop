@@ -18,6 +18,7 @@ ansible
 pipenv
 EOF
 
-"$ASDF_BIN" plugin add python https://github.com/danhper/asdf-python.git
-"$ASDF_BIN" install python latest
+source $ASDF_BIN
+asdf plugin add python https://github.com/danhper/asdf-python.git
+asdf install python latest
 

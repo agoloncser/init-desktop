@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.12.1](https://www.github.com/agoloncser/desktop-init-scripts/compare/v0.12.0...v0.12.1) (2023-11-02)
+
+
+### Bug Fixes
+
+* Fix asdf call ([a5cc0ce](https://www.github.com/agoloncser/desktop-init-scripts/commit/a5cc0ce12b8b44edcf67b33e2f993456149cd734))
+
 ## [0.12.0](https://www.github.com/agoloncser/desktop-init-scripts/compare/v0.11.0...v0.12.0) (2023-05-19)
 
 

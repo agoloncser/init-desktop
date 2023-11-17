@@ -12,3 +12,9 @@ install:
 
 uninstall:
 	@rm -v $(addprefix $(PREFIX),$(notdir $(SCRIPTS)))
+
+.PHONY: asdf
+
+asdf:
+	bash src/04_asdf.sh
+

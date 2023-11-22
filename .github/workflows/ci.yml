@@ -1,0 +1,13 @@
+---
+name: Molecule testing
+"on":
+  push: {}
+  pull_request: {}
+jobs:
+  molecule:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Make install
+        run: make install

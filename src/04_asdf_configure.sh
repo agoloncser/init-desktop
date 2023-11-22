@@ -21,6 +21,7 @@ set -eu
 cat <<EOF > "$HOME/.default-python-packages"
 ansible-core
 pipenv
+yamllint
 EOF
 
 grep '\.asdf\/asdf.sh' $HOME/.bashrc ||
@@ -29,7 +30,9 @@ cat <<EOF >> $HOME/.bashrc
 . "$HOME/.asdf/asdf.sh"
 EOF
 
+cp shared/.default-python-packages "$HOME/.default-python-packages"
 cp shared/.tool-versions "$HOME/.tool-versions"
+
 asdf update
 asdf plugin-update --all 
 asdf install

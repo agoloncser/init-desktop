@@ -16,5 +16,5 @@ uninstall:
 .PHONY: asdf
 
 asdf:
-	bash src/04_asdf.sh
+	bash src/04_asdf_configure.sh
 

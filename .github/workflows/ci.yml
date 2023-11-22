@@ -5,7 +5,7 @@ name: Install test
   pull_request: {}
 jobs:
   install_test:
-    runs-on: ${{ matrix.runs_on}}
+    runs-on: ${{ matrix.runs_on }}
     strategy:
       matrix:
         runs_on:

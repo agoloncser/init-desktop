@@ -10,8 +10,7 @@ jobs:
       matrix:
         runs_on:
           - ubuntu-latest
-          - fedora-latest
-          - debian-latest
+          - macos-latest
 
     steps:
       - name: Checkout

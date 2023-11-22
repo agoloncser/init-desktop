@@ -1,13 +1,22 @@
 ---
-name: Molecule testing
+name: Install test
 "on":
   push: {}
   pull_request: {}
 jobs:
-  molecule:
-    runs-on: ubuntu-latest
+  install_test:
+    runs-on: ${{ matrix.runs_on}}
+    strategy:
+      matrix:
+        runs_on:
+          - ubuntu-latest
+          - fedora-latest
+          - debian-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Make install
         run: make install
+        env:
+          DESKTOP_INIT_SKIP_UPGRADE: 1

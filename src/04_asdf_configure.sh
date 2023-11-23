@@ -30,8 +30,8 @@ cat <<EOF >> $HOME/.bashrc
 . "$HOME/.asdf/asdf.sh"
 EOF
 
-cp shared/.default-python-packages "$HOME/.default-python-packages"
-cp shared/.tool-versions "$HOME/.tool-versions"
+cp shared/asdf/.default-python-packages "$HOME/.default-python-packages"
+cp shared/asdf/.tool-versions "$HOME/.tool-versions"
 
 asdf update
 asdf plugin-update --all 

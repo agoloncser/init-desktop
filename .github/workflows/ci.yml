@@ -1,0 +1,20 @@
+---
+name: Install test
+"on":
+  push: {}
+  pull_request: {}
+jobs:
+  install_test:
+    runs-on: ${{ matrix.runs_on }}
+    strategy:
+      matrix:
+        runs_on:
+          - ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Make install
+        run: make install
+        env:
+          DESKTOP_INIT_SKIP_UPGRADE: 1

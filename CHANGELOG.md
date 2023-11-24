@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.13.0](https://github.com/agoloncser/desktop-init-scripts/compare/v0.12.1...v0.13.0) (2023-11-24)
+
+
+### Features
+
+* Generalize asdf installation and support Renovate ([ae49a53](https://github.com/agoloncser/desktop-init-scripts/commit/ae49a5327c05a9a72f47ed0a22672d22be4c98af))
+* Install node packages ([2db744c](https://github.com/agoloncser/desktop-init-scripts/commit/2db744c19ec14c8e6e1621e9150fa463cec26477)), closes [#41](https://github.com/agoloncser/desktop-init-scripts/issues/41) [#45](https://github.com/agoloncser/desktop-init-scripts/issues/45) [#35](https://github.com/agoloncser/desktop-init-scripts/issues/35)
+* Remove python and ansible from base install in favor of asdf ([75b3d2b](https://github.com/agoloncser/desktop-init-scripts/commit/75b3d2b3f3143308b9e34065c9566fe7e5b32c06)), closes [#45](https://github.com/agoloncser/desktop-init-scripts/issues/45)
+* Use Makefile for installation ([813e7c8](https://github.com/agoloncser/desktop-init-scripts/commit/813e7c8be305c38583346daf65ee0ecd4ab671ec))
+
+
+### Bug Fixes
+
+* Upgrade asdf install ([177d3ec](https://github.com/agoloncser/desktop-init-scripts/commit/177d3ec60a8e5ec3e62e1ccf12dafbab89f99183))
+
 ### [0.12.1](https://www.github.com/agoloncser/desktop-init-scripts/compare/v0.12.0...v0.12.1) (2023-11-02)
 
 

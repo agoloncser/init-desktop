@@ -18,19 +18,13 @@ asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git || true
 asdf plugin add python https://github.com/danhper/asdf-python.git || true
 set -eu
 
-cat <<EOF > "$HOME/.default-python-packages"
-ansible-core
-pipenv
-yamllint
-EOF
-
 grep '\.asdf\/asdf.sh' $HOME/.bashrc ||
 cat <<EOF >> $HOME/.bashrc
 # Load ASDF - desktop-init-scripts
 . "$HOME/.asdf/asdf.sh"
 EOF
 
-cp shared/asdf/.default-python-packages "$HOME/.default-python-packages"
+cp shared/asdf/requirements.txt "$HOME/.default-python-packages"
 cp shared/asdf/.tool-versions "$HOME/.tool-versions"
 
 asdf update

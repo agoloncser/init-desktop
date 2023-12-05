@@ -4,7 +4,7 @@ set -euxv
 
 GNUPGHOME=${GNUPGHOME:="${HOME}/.gnupg"}
 
-mkdir "$GNUPGHOME" 2>/dev/null
+mkdir "$GNUPGHOME" 2>/dev/null || true
 chmod 0700 "$GNUPGHOME"
 
 cat <<EOF > "${GNUPGHOME}/gpg.conf"

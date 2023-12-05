@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.14.0](https://github.com/agoloncser/desktop-init-scripts/compare/v0.13.0...v0.14.0) (2023-12-02)
+
+
+### Features
+
+* make gpg ([488f742](https://github.com/agoloncser/desktop-init-scripts/commit/488f7427ac2748f53adaa991da3f6fda73ce1379))
+
+## [0.13.0](https://www.github.com/agoloncser/desktop-init-scripts/compare/v0.12.1...v0.13.0) (2023-11-17)
+
+
+### Features
+
+* Generalize asdf installation and support Renovate ([ae49a53](https://www.github.com/agoloncser/desktop-init-scripts/commit/ae49a5327c05a9a72f47ed0a22672d22be4c98af))
+
 ### [0.12.1](https://www.github.com/agoloncser/desktop-init-scripts/compare/v0.12.0...v0.12.1) (2023-11-02)
 
 

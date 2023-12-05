@@ -10,6 +10,10 @@ ASDF_DOWNLOAD_PATH="$(mktemp -d)"
 export ZSH_VERSION
 export ASDF_DOWNLOAD_PATH
 
+if [ ! -d ~/.asdf ] ; then
+    git clone https://github.com/asdf-vm/asdf.git ~/.asdf
+fi
+
 . "$ASDF_BIN"
 
 set +eu

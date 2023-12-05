@@ -13,7 +13,7 @@ install :
 
 .PHONY : asdf gpg
 asdf :
-	bash src/03_asdf_install.sh
+	bash src/03_asdf_deps.sh
 	bash src/04_asdf_configure.sh
 
 gpg :

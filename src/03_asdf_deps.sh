@@ -7,10 +7,10 @@ DIR=$(dirname $0)
 case $(uname -s) in
     Linux)
         source /etc/os-release
-        bash "$DIR/03_asdf_install_${ID}.sh"
+        bash "$DIR/03_asdf_deps_${ID}.sh"
         ;;
     Darwin)
-        bash "$DIR/03_asdf_install_darwin.sh"
+        bash "$DIR/03_asdf_deps_darwin.sh"
         ;;
      *)
          echo "Unsupported OS."

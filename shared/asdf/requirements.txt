@@ -1,5 +1,6 @@
+GitPython==3.1.40
 ansible-core==2.16.0
 bumpversion==0.6.0
-GitPython==3.1.40
 pipenv==2023.11.15
+python-lsp-server[all]==1.9.0
 yamllint==1.33.0

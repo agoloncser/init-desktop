@@ -2,8 +2,6 @@
 
 set -eu
 
-ASDF_BIN=~/.asdf/asdf.sh
-
 # Fix asdf variable unbound errors
 ZSH_VERSION=""
 ASDF_DOWNLOAD_PATH="$(mktemp -d)"
@@ -14,7 +12,7 @@ if [ ! -d ~/.asdf ] ; then
     git clone https://github.com/asdf-vm/asdf.git ~/.asdf
 fi
 
-. "$ASDF_BIN"
+. "${HOME}/.asdf/asdf.sh"
 
 set +eu
 asdf plugin add ghq    https://github.com/kajisha/asdf-ghq.git || true
@@ -22,8 +20,8 @@ asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git || true
 asdf plugin add python https://github.com/danhper/asdf-python.git || true
 set -eu
 
-grep '\.asdf\/asdf.sh' $HOME/.bashrc ||
-cat <<EOF >> $HOME/.bashrc
+grep '\.asdf\/asdf.sh' "$HOME/.bashrc" ||
+cat <<EOF >> "$HOME/.bashrc"
 # Load ASDF - desktop-init-scripts
 . "$HOME/.asdf/asdf.sh"
 EOF

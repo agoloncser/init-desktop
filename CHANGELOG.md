@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.15.0](https://github.com/agoloncser/desktop-init-scripts/compare/v0.14.0...v0.15.0) (2023-12-08)
+
+
+### Features
+
+* Make default-python-packages support Renovate ([0d68d51](https://github.com/agoloncser/desktop-init-scripts/commit/0d68d519de38abe3ad73a78bf8f5a23a62ca1f67))
+* Simplify asdf installation ([2fd45e5](https://github.com/agoloncser/desktop-init-scripts/commit/2fd45e5796484712a01d55383d64cbb880a7b677))
+
+
+### Bug Fixes
+
+* Support both x86_64 and arm64 macOS ([d59342e](https://github.com/agoloncser/desktop-init-scripts/commit/d59342e1a19d76b90be8087e30cb634420e14220)), closes [#36](https://github.com/agoloncser/desktop-init-scripts/issues/36)
+
 ## [0.14.0](https://github.com/agoloncser/desktop-init-scripts/compare/v0.13.0...v0.14.0) (2023-12-02)
 
 

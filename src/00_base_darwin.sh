@@ -31,7 +31,6 @@ brew install \
     mas \
     openssh \
     pass \
-    pass \
     pass-otp \
     rsync \
     tmux

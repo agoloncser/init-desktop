@@ -1,5 +1,11 @@
 # Desktop init scripts
 
+On Darwin the following command must run to bootstrap the installation:
+
+```shell
+xcode-select --install
+```
+
 ## Environment
 
 By default the below scripts upgrade the nodes as well. However there are circumstances that this is not required. In this cases use the following environment variable:

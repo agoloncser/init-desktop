@@ -34,3 +34,7 @@ brew install \
     pass-otp \
     rsync \
     tmux
+
+brew install --cask \
+     gpg-suite-no-mail \
+     emacs

@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.15.1](https://github.com/agoloncser/desktop-init-scripts/compare/v0.15.0...v0.15.1) (2023-12-12)
+
+
+### Bug Fixes
+
+* Install gpg-suite and emacs ([8db34f6](https://github.com/agoloncser/desktop-init-scripts/commit/8db34f690f1d052568aebfed9bad404ce4a0b6cc)), closes [#46](https://github.com/agoloncser/desktop-init-scripts/issues/46) [#42](https://github.com/agoloncser/desktop-init-scripts/issues/42)
+* Remove ansible from the default packages ([9346332](https://github.com/agoloncser/desktop-init-scripts/commit/93463326c2cb0c7fe0290e1372c75b065da75e40))
+
 ## [0.15.0](https://github.com/agoloncser/desktop-init-scripts/compare/v0.14.0...v0.15.0) (2023-12-08)
 
 

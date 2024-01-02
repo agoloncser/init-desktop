@@ -10,6 +10,8 @@ SCRIPTS  = $(SRCDIR)/02_genssh.sh
 install :
 	@install -v -d "$(PREFIX)" && install -m 0700 -v "$(SRCDIR)/02_genssh.sh" "$(PREFIX)/genssh.sh"
 	bash src/00_base.sh
+	bash src/02_ssh_initial.sh
+	bash src/02_trust_github.sh
 
 .PHONY : asdf gpg
 asdf :

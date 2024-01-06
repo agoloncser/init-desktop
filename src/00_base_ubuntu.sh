@@ -3,8 +3,8 @@ set -euxv
 
 DESKTOP_INIT_SKIP_UPGRADE=${DESKTOP_INIT_SKIP_UPGRADE:=""}
 
-sudo add-apt-repository universe
-sudo add-apt-repository multiverse
+sudo add-apt-repository -y universe
+sudo add-apt-repository -y multiverse
 sudo apt update -y
 
 if [ -z "$DESKTOP_INIT_SKIP_UPGRADE" ] ; then

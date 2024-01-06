@@ -2,11 +2,17 @@
 
 set -eu
 
-DIR=$(dirname $0)
+DIR="$(dirname "$0")"
 
+echo "Create directories..."
+for i in $HOME/src $HOME/tmp ; do
+    mkdir -p "$i" || true
+done
+
+echo "Installing packages..."
 case $(uname -s) in
     Linux)
-        source /etc/os-release
+        . /etc/os-release
         bash "$DIR/00_base_${ID}.sh"
         ;;
     Darwin)

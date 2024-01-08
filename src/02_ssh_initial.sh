@@ -2,13 +2,14 @@
 
 set -eu
 
-if [ -d "$HOME/.ssh" ] ;then
-    echo ".ssh directory exists, exiting."
+mkdir "$HOME/.ssh" || true
+chmod 0700 "$HOME/.ssh"
+
+if [ -d "$HOME/.ssh/config" ] ;then
+    echo "$HOME/.ssh/config directory exists, exiting."
     exit 0
 fi
 
-mkdir "$HOME/.ssh"
-chmod 0700 "$HOME/.ssh"
 cat <<EOF > "$HOME/.ssh/config"
 Host github.com
 HostName github.com
@@ -16,5 +17,3 @@ IdentitiesOnly yes
 IdentityFile ~/.ssh/ed25519-github-%L-%u
 User git
 EOF
-
-

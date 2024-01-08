@@ -2,7 +2,7 @@
 
 set -eu
 
-if [ -d "$HOME/.ssh" ] ;then
+if [ -d "$HOME/.gitconfig" ] ;then
     echo ".gitconfig exists, exiting."
     exit 0
 fi

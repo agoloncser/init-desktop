@@ -7,5 +7,5 @@ if [ -d "$HOME/.gitconfig" ] ;then
     exit 0
 fi
 
-cp share/gitconfig "$HOME/.gitconfig"
+cp share/gitconfig.ini "$HOME/.gitconfig"
 

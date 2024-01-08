@@ -10,4 +10,4 @@ if [ -d "$HOME/.ssh/config" ] ;then
     exit 0
 fi
 
-cp shared/ssh_config.conf "$HOME/.ssh/config"
+cp share/ssh_config.conf "$HOME/.ssh/config"

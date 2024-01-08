@@ -26,9 +26,9 @@ cat <<EOF >> "$HOME/.bashrc"
 . "$HOME/.asdf/asdf.sh"
 EOF
 
-cp shared/asdf/requirements.txt "$HOME/.default-python-packages"
-cp shared/asdf/.default-npm-packages "$HOME/.default-npm-packages"
-cp shared/asdf/.tool-versions "$HOME/.tool-versions"
+cp share/asdf/requirements.txt "$HOME/.default-python-packages"
+cp share/asdf/.default-npm-packages "$HOME/.default-npm-packages"
+cp share/asdf/.tool-versions "$HOME/.tool-versions"
 
 echo "Update asdf..."
 asdf update

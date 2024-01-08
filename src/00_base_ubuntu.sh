@@ -1,13 +1,13 @@
 #!/bin/sh
 set -euxv
 
-DESKTOP_INIT_SKIP_UPGRADE=${DESKTOP_INIT_SKIP_UPGRADE:=""}
+SKIP_UPGRADE=${SKIP_UPGRADE:=""}
 
 sudo add-apt-repository -y universe
 sudo add-apt-repository -y multiverse
 sudo apt update -y
 
-if [ -z "$DESKTOP_INIT_SKIP_UPGRADE" ] ; then
+if [ -z "$SKIP_UPGRADE" ] ; then
     sudo apt upgrade -y
 fi
 

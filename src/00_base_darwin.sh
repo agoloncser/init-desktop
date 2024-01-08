@@ -1,7 +1,7 @@
 #!/bin/sh
 set -eu
 
-DESKTOP_INIT_SKIP_UPGRADE=${DESKTOP_INIT_SKIP_UPGRADE:=""}
+SKIP_UPGRADE=${SKIP_UPGRADE:=""}
 
 # installing homebrew
 HOMEBREW_BIN=/opt/homebrew/bin/brew
@@ -19,7 +19,7 @@ fi
 
 brew update
 
-if [ -z "$DESKTOP_INIT_SKIP_UPGRADE" ] ; then
+if [ -z "$SKIP_UPGRADE" ] ; then
     brew upgrade
 fi
 

@@ -10,10 +10,4 @@ if [ -d "$HOME/.ssh/config" ] ;then
     exit 0
 fi
 
-cat <<EOF > "$HOME/.ssh/config"
-Host github.com
-HostName github.com
-IdentitiesOnly yes
-IdentityFile ~/.ssh/ed25519-github-%L-%u
-User git
-EOF
+cp shared/ssh_config.conf "$HOME/.ssh/config"

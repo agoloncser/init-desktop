@@ -54,7 +54,7 @@ fi
 
 set -eu
 
-PASS_BASE_DIRECTORY=${PASS_BASE_DIRECTORY:="ssh"}
+PASS_BASE_DIRECTORY=${PASS_BASE_DIRECTORY:="localhost/ssh"}
 KEYNAME="ed25519-${key_usage}"
 if [ -z "$NO_HOSTNAME" ] ; then
     MY_HOSTNAME=$(hostname | perl -F'\.' -lane 'print $F[0]')

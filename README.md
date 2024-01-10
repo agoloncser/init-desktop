@@ -1,65 +1,28 @@
 # Desktop init scripts
 
+This repo installs some basic tools and make some initial configuration to the system.
+
+Supports:
+
+- macOS
+- Ubuntu 20.04, 22.04
+- Fedora 38-40
+- FreeBSD
+
+## Prerequisites
+
 On Darwin the following command must run to bootstrap the installation:
 
 ```shell
 xcode-select --install
 ```
 
-## Environment
+## Install
 
-By default the below scripts upgrade the nodes as well. However there are circumstances that this is not required. In this cases use the following environment variable:
-
-```shell
-export SKIP_UPGRADE=1
-```
-
-or when using `fish` shell:
+To install the environment run the following:
 
 ```shell
-set -xg SKIP_UPGRADE 1
-```
-
-## Setup OS
-
-Ubuntu
-
-```shell
-curl -fsSL https://raw.githubusercontent.com/agoloncser/desktop-init-scripts/master/src/00_ubuntu.sh | sh -xv
-```
-
-macOS
-
-```shell
-curl -fsSL https://raw.githubusercontent.com/agoloncser/desktop-init-scripts/master/src/00_darwin.sh | sh -xv
-```
-
-Fedora
-
-```shell
-curl -fsSL https://raw.githubusercontent.com/agoloncser/desktop-init-scripts/master/src/00_fedora.sh | sh -xv
-```
-
-## Caps-lock to control on Gnome
-
-```shell
-curl -fsSL https://raw.githubusercontent.com/agoloncser/desktop-init-scripts/master/src/99_caps.sh | sh -xv
-```
-
-## Setup GnuPG
-
-```shell
-curl -fsSL https://raw.githubusercontent.com/agoloncser/desktop-init-scripts/master/src/01_gpg.sh | sh -xv
-```
-
-## Trust Github ssh hostkeys
-
-```shell
-curl -fsSL https://raw.githubusercontent.com/agoloncser/desktop-init-scripts/readme/src/03_trust_github.sh | sh -xv
-```
-
-## Generate host ssh key
-
-```shell
-curl -fsSL https://raw.githubusercontent.com/agoloncser/desktop-init-scripts/master/src/02_genssh.sh | sh -xv
+git clone https://github.com/agoloncser/desktop-init-scripts
+cd desktop-init-scripts
+SKIP_UPGRADE=1 make install
 ```

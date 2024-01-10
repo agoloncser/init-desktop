@@ -24,5 +24,11 @@ To install the environment run the following:
 ```shell
 git clone https://github.com/agoloncser/desktop-init-scripts
 cd desktop-init-scripts
+make install
+```
+
+By default this upgrades the whole system before installing anything. To skip this step, set the variable `SKIP_UPGRADE` before running the install scripts:
+
+```shell
 SKIP_UPGRADE=1 make install
 ```

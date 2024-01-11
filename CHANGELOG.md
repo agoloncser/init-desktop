@@ -1,5 +1,25 @@
 # Changelog
 
+## [0.16.0](https://github.com/agoloncser/desktop-init-scripts/compare/v0.15.1...v0.16.0) (2024-01-11)
+
+
+### Features
+
+* Configure git with git config ([8f8a56a](https://github.com/agoloncser/desktop-init-scripts/commit/8f8a56a8a54b8f79f2b24ce0b1d9b34f66c9c039))
+* Initial gitconfig ([5b08509](https://github.com/agoloncser/desktop-init-scripts/commit/5b08509211fc259a4a35a2d56a2fd90dcb0e2f40))
+* Initialize ssh config ([aace663](https://github.com/agoloncser/desktop-init-scripts/commit/aace663e7acfe4f55c3dc443abf7e6a28c318bcc))
+
+
+### Bug Fixes
+
+* Assume yes to repository additions ([095e329](https://github.com/agoloncser/desktop-init-scripts/commit/095e3294c867268aa0f8c9509f5fde502bc40672))
+* Do not interrupt scripts for input ([9528068](https://github.com/agoloncser/desktop-init-scripts/commit/95280683df0cdeb9caa83b436670628037712c71))
+* Minor tweaks to git and ssh init scripts ([25be5c8](https://github.com/agoloncser/desktop-init-scripts/commit/25be5c8806b592ebaec9d49ce16b1f116e098fb0))
+* Move config files to shared instead of EOF ([b130021](https://github.com/agoloncser/desktop-init-scripts/commit/b130021a2e97841f60b0847c74bac23c36900435))
+* Rename DESKTOP_INIT_SKIP_UPGRADE to SKIP_UPGRADE ([553c2f2](https://github.com/agoloncser/desktop-init-scripts/commit/553c2f2277bab3e5ab2117dec4af6d39e674d860))
+* Run everything on make install ([1f45581](https://github.com/agoloncser/desktop-init-scripts/commit/1f45581f8023c3a55bf9bc4b9677f22b3476b3a3))
+* Script name ([3cdf5f5](https://github.com/agoloncser/desktop-init-scripts/commit/3cdf5f5aed04fb565cffb79fa26ae65b61c6d717))
+
 ## [0.15.1](https://github.com/agoloncser/desktop-init-scripts/compare/v0.15.0...v0.15.1) (2023-12-12)
 
 

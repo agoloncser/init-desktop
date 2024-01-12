@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.17.0](https://github.com/agoloncser/desktop-init-scripts/compare/v0.16.0...v0.17.0) (2024-01-12)
+
+
+### Features
+
+* **genssh.sh:** Add hostname to generated key comment ([ce55f88](https://github.com/agoloncser/desktop-init-scripts/commit/ce55f886b60309c766eaf1661f4bb9fe2c1d5ae5))
+* Support faster installation with INSTALL_FAST ([942b2b4](https://github.com/agoloncser/desktop-init-scripts/commit/942b2b4acae7857c38829a38160f698f396744df))
+
 ## [0.16.0](https://github.com/agoloncser/desktop-init-scripts/compare/v0.15.1...v0.16.0) (2024-01-11)
 
 

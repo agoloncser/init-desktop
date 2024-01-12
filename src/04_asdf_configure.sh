@@ -2,6 +2,8 @@
 
 set -eu
 
+INSTALL_FAST=${INSTALL_FAST:=""}
+
 # Fix asdf variable unbound errors
 ZSH_VERSION=""
 ASDF_DOWNLOAD_PATH="$(mktemp -d)"
@@ -34,13 +36,16 @@ echo "Update asdf..."
 asdf update
 asdf plugin-update --all
 
-echo "Install asdf tools..."
-asdf install
+if [ -z "$INSTALL_FAST" ] ; then
+    echo "Install asdf tools..."
+    asdf install
 
-echo "Update python packages..."
-pip install --upgrade pip
-pip install --user -r "$HOME/.default-python-packages"
+    echo "Update python packages..."
+    pip install --upgrade pip
+    pip install --user -r "$HOME/.default-python-packages"
 
-echo "Update npm packages..."
-npm update -g npm
-xargs npm update --global < "$HOME/.default-npm-packages"
+    echo "Update npm packages..."
+    npm update -g npm
+    xargs npm update --global < "$HOME/.default-npm-packages"
+fi
+

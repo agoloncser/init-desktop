@@ -27,8 +27,8 @@ cd desktop-init-scripts
 make install
 ```
 
-By default this upgrades the whole system before installing anything. To skip this step, set the variable `SKIP_UPGRADE` before running the install scripts:
+By default this upgrades the whole system before installing anything. To skip this step, set the variable `INSTALL_FAST` before running the install scripts. This will also skip compiling everything from source with `asdf`.
 
 ```shell
-SKIP_UPGRADE=1 make install
+INSTALL_FAST=1 make install
 ```

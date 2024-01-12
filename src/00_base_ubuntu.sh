@@ -1,13 +1,13 @@
 #!/bin/sh
 set -euxv
 
-SKIP_UPGRADE=${SKIP_UPGRADE:=""}
+INSTALL_FAST=${INSTALL_FAST:=""}
 
 sudo add-apt-repository -y universe
 sudo add-apt-repository -y multiverse
 sudo apt update -y
 
-if [ -z "$SKIP_UPGRADE" ] ; then
+if [ -z "$INSTALL_FAST" ] ; then
     sudo apt upgrade -y
 fi
 

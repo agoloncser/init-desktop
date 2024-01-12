@@ -56,9 +56,11 @@ set -eu
 
 PASS_BASE_DIRECTORY=${PASS_BASE_DIRECTORY:="ssh"}
 KEYNAME="ed25519-${key_usage}"
+KEY_COMMENT="name:${key_usage} created:$(date +%Y%m%d-%H%M%S)"
 if [ -z "$NO_HOSTNAME" ] ; then
     MY_HOSTNAME=$(hostname | perl -F'\.' -lane 'print $F[0]')
     KEYNAME="${KEYNAME}-${MY_HOSTNAME}"
+    KEY_COMMENT="name:${key_usage} created:$(date +%Y%m%d-%H%M%S) host:${MY_HOSTNAME}"
 fi
 if [ -z "$NO_USERNAME" ] ; then
     KEYNAME="${KEYNAME}-${USER}"
@@ -66,7 +68,6 @@ fi
 
 PASSPHRASE_LOCATION="${PASS_BASE_DIRECTORY}/${KEYNAME}/passphrase"
 PUBKEY_LOCATION="${PASS_BASE_DIRECTORY}/${KEYNAME}/pubkey"
-KEY_COMMENT="name:${key_usage} created:$(date +%Y%m%d-%H%M%S)"
 
 # this is optional so we can give a default
 key_directory=${key_directory:="${HOME}/.ssh/"}

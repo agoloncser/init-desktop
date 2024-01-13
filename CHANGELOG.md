@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.18.0](https://github.com/agoloncser/desktop-init-scripts/compare/v0.17.0...v0.18.0) (2024-01-13)
+
+
+### Features
+
+* Git OAuth support for macOS and Fedora ([3e5a3ea](https://github.com/agoloncser/desktop-init-scripts/commit/3e5a3ea51e618beab1291d50f4650ca8f1c9f041))
+
 ## [0.17.0](https://github.com/agoloncser/desktop-init-scripts/compare/v0.16.0...v0.17.0) (2024-01-12)
 
 

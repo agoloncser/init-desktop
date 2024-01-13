@@ -1,9 +1,9 @@
 #!/bin/sh
 set -euxv
 
-SKIP_UPGRADE=${SKIP_UPGRADE:=""}
+INSTALL_FAST=${INSTALL_FAST:=""}
 
-if [ -z "$SKIP_UPGRADE" ] ; then
+if [ -z "$INSTALL_FAST" ] ; then
     sudo dnf upgrade -y
 fi
 

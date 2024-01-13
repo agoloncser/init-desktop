@@ -1,7 +1,7 @@
 #!/bin/sh
 set -eu
 
-SKIP_UPGRADE=${SKIP_UPGRADE:=""}
+INSTALL_FAST=${INSTALL_FAST:=""}
 
 # installing homebrew
 HOMEBREW_BIN=/opt/homebrew/bin/brew
@@ -19,7 +19,7 @@ fi
 
 brew update
 
-if [ -z "$SKIP_UPGRADE" ] ; then
+if [ -z "$INSTALL_FAST" ] ; then
     brew upgrade
 fi
 

@@ -13,6 +13,7 @@ sudo dnf install -y \
     fish \
     freerdp \
     git \
+    git-credential-oauth \
     gnupg-pkcs11-scd \
     gnupg2 \
     pass \

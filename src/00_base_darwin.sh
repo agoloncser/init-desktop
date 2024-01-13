@@ -27,6 +27,7 @@ brew install \
     curl \
     fish \
     git \
+    git-credential-oauth \
     gnupg \
     mas \
     openssh \

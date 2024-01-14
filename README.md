@@ -1,6 +1,6 @@
 # Desktop init scripts
 
-This repo installs some basic tools and make some initial configuration to the system.
+This repo installs some basic tools and make some initial configuration to my desktop system.
 
 Supports:
 

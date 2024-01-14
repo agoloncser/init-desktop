@@ -17,4 +17,4 @@ jobs:
       - name: Make install
         run: make install
         env:
-          DESKTOP_INIT_SKIP_UPGRADE: 1
+          INSTALL_FAST: 1

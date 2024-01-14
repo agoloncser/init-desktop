@@ -16,8 +16,8 @@ case $(uname -s) in
     Linux)
         . /etc/os-release
         case $ID in
-            Fedora) _configure_oauth ;;
-            Ubuntu)  echo "WARNING: setup the HTTPS authentication according to README.md manually."
+            fedora) _configure_oauth ;;
+            ubuntu)  echo "WARNING: setup the HTTPS authentication according to README.md manually."
                 exit 0
                 ;;
             *)  echo "Unsupported OS: $ID"

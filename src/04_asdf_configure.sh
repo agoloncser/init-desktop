@@ -24,7 +24,7 @@ set -eu
 
 grep '\.asdf\/asdf.sh' "$HOME/.bashrc" ||
 cat <<EOF >> "$HOME/.bashrc"
-# Load ASDF - desktop-init-scripts
+# Load ASDF - init-desktop
 . "$HOME/.asdf/asdf.sh"
 EOF
 

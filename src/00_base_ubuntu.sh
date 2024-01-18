@@ -19,6 +19,7 @@ sudo apt-get install -y \
     gconf2 \
     git \
     gnupg2 \
+    mosh \
     pass \
     pass-extension-otp \
     pcscd \

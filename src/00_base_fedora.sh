@@ -16,6 +16,7 @@ sudo dnf install -y \
     git-credential-oauth \
     gnupg-pkcs11-scd \
     gnupg2 \
+    mosh \
     pass \
     pass-otp \
     pcsc-lite \

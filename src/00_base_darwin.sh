@@ -30,6 +30,7 @@ brew install \
     git-credential-oauth \
     gnupg \
     mas \
+    mosh \
     openssh \
     pass \
     pass-otp \

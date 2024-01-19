@@ -16,7 +16,7 @@ if [ ! -d ~/.asdf ] ; then
     git clone --branch "$ASDF_VERSION" https://github.com/asdf-vm/asdf.git ~/.asdf
 fi
 
-if [ -x "${HOME}/.asdf/asdf.sh" ] ; then
+if [ -e "${HOME}/.asdf/asdf.sh" ] ; then
     # shellcheck source=/dev/null
     . "${HOME}/.asdf/asdf.sh"
 else

@@ -16,7 +16,13 @@ if [ ! -d ~/.asdf ] ; then
     git clone --branch "$ASDF_VERSION" https://github.com/asdf-vm/asdf.git ~/.asdf
 fi
 
-. "${HOME}/.asdf/asdf.sh"
+if [ -x "${HOME}/.asdf/asdf.sh" ] ; then
+    # shellcheck source=/dev/null
+    . "${HOME}/.asdf/asdf.sh"
+else
+    echo "ERROR: asdf is not installed."
+    exit 1
+fi
 
 set +eu
 asdf plugin add ghq    https://github.com/kajisha/asdf-ghq.git || true

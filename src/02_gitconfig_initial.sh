@@ -4,7 +4,7 @@ set -eu
 
 git config --global credential.helper cache
 git config --global alias.root "rev-parse --show-toplevel"
-git config --global ghq.root = ~/src
+git config --global ghq.root ~/src
 
 _configure_oauth(){
     echo "Configure git-credential-oauth"

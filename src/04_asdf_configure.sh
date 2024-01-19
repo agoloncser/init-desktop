@@ -2,6 +2,8 @@
 
 set -eu
 
+. "versions.conf"
+
 INSTALL_FAST=${INSTALL_FAST:=""}
 
 # Fix asdf variable unbound errors
@@ -11,7 +13,7 @@ export ZSH_VERSION
 export ASDF_DOWNLOAD_PATH
 
 if [ ! -d ~/.asdf ] ; then
-    git clone https://github.com/asdf-vm/asdf.git ~/.asdf
+    git clone --branch "$ASDF_VERSION" https://github.com/asdf-vm/asdf.git ~/.asdf
 fi
 
 . "${HOME}/.asdf/asdf.sh"

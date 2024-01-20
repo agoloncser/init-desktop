@@ -27,6 +27,20 @@ sudo dnf install -y \
     xz \
     zsh
 
+# https://github.com/pyenv/pyenv/wiki#suggested-build-environment
+sudo dnf install -y \
+    bzip2 \
+    bzip2-devel \
+    gcc \
+    libffi-devel \
+    make \
+    openssl-devel \
+    readline-devel \
+    sqlite \
+    sqlite-devel \
+    tk-devel \
+    xz-devel \
+    zlib-devel
 
 sudo systemctl enable pcscd
 sudo systemctl start pcscd

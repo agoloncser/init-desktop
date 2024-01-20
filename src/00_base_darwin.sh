@@ -40,3 +40,12 @@ brew install \
 brew install --cask \
      gpg-suite-no-mail \
      emacs
+
+# https://github.com/pyenv/pyenv/wiki#suggested-build-environment
+brew install \
+    openssl \
+    readline \
+    sqlite3 \
+    tcl-tk \
+    xz \
+    zlib

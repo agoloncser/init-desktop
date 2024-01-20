@@ -28,6 +28,19 @@ sudo zypper install -y \
     xz \
     zsh
 
+sudo zypper install -y \
+    bzip2 \
+    gcc \
+    libbz2-devel \
+    libffi-devel \
+    libopenssl-devel \
+    make \
+    readline-devel \
+    sqlite3 \
+    sqlite3-devel \
+    tk-devel \
+    xz-devel \
+    zlib-devel
 
 sudo systemctl enable pcscd
 sudo systemctl start pcscd

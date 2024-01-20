@@ -1,5 +1,24 @@
 # Changelog
 
+## [0.19.0](https://github.com/agoloncser/init-desktop/compare/v0.18.0...v0.19.0) (2024-01-20)
+
+
+### Features
+
+* Remove genssh.sh script ([a1a95c0](https://github.com/agoloncser/init-desktop/commit/a1a95c03c23f29d299b13c7476b50bd1f4a1650a)), closes [#66](https://github.com/agoloncser/init-desktop/issues/66)
+* Remove ssh intialization ([ce6eab7](https://github.com/agoloncser/init-desktop/commit/ce6eab71f86d26d81dc7b077fecba63ff14d0c1b)), closes [#65](https://github.com/agoloncser/init-desktop/issues/65)
+* Support for OpenSuSE Tumbleweed ([e87ca2e](https://github.com/agoloncser/init-desktop/commit/e87ca2e388fcdd1ead059ecaec112f75b507ad58))
+* Track asdf version ([e74e585](https://github.com/agoloncser/init-desktop/commit/e74e58515797a086c875169dc067f8c5bec548b8)), closes [#51](https://github.com/agoloncser/init-desktop/issues/51)
+* Unify installers ([e7ea9a0](https://github.com/agoloncser/init-desktop/commit/e7ea9a03a742fd69d79c648edbd6e486ae31d1ed)), closes [#64](https://github.com/agoloncser/init-desktop/issues/64)
+
+
+### Bug Fixes
+
+* Add mosh ([cae81c0](https://github.com/agoloncser/init-desktop/commit/cae81c08c97340d203d5b344e485aba8f81f8459))
+* Git config generating invalid entries ([e8fd7f2](https://github.com/agoloncser/init-desktop/commit/e8fd7f24d41e52f324b256b5487b31e6ffaf2ebf))
+* Prefer apt-get in scripts ([509d1fc](https://github.com/agoloncser/init-desktop/commit/509d1fc9c910b25667c20c5616ba427ed283d404))
+* Sourcing asdf correctly ([99774bf](https://github.com/agoloncser/init-desktop/commit/99774bf63e13555d7ee5c16cddab18ec775a2842))
+
 ## [0.18.0](https://github.com/agoloncser/init-desktop/compare/v0.17.0...v0.18.0) (2024-01-14)
 
 

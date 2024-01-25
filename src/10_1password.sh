@@ -11,7 +11,7 @@ case $(uname -s) in
         case $ID in 
             opensuse*) 
                 sudo rpm --import https://downloads.1password.com/linux/keys/1password.asc
-                sudo zypper addrepo https://downloads.1password.com/linux/rpm/stable/x86_64 1password
+                sudo zypper addrepo https://downloads.1password.com/linux/rpm/stable/x86_64 1password || true
                 sudo zypper install 1password
                 ;;
             ubuntu)

@@ -21,7 +21,6 @@ case $(uname -s) in
                 exit 0
                 ;;
             *)  echo "Unsupported OS: $ID"
-                exit 1
                 ;;
         esac
     ;;

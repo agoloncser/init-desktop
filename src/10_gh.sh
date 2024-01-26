@@ -33,11 +33,8 @@ case $(uname -s) in
 
         esac
 
-        sudo systemctl disable resilio-sync || true
-        systemctl --user enable resilio-sync
-        systemctl --user start resilio-sync
         ;;
-    # Darwin) brew install --cask 1password ;;
+    Darwin) brew install gh ;;
     *)
          echo "Unsupported OS."
          exit 0

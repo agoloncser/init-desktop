@@ -8,16 +8,24 @@ echo "Installing Tailscale..."
 case $(uname -s) in
     Linux)
         . /etc/os-release
+        if [ -z "$ID" ] ; then
+            echo "ERROR: Cannot detect distro."
+        fi
+        if [ -z "$VERSION_CODENAME" ] ; then
+            echo "ERROR: Cannot detect distro version."
+        fi
         case $ID in
             opensuse*)
                 sudo zypper ar -g -r https://pkgs.tailscale.com/stable/opensuse/tumbleweed/tailscale.repo
                 sudo zypper ref
                 sudo zypper in -y tailscale
                 ;;
-            # ubuntu)
-            #     echo "TODO"
-            #     exit 0 ;;
-            #     ;;
+            ubuntu)
+                curl -fsSL "https://pkgs.tailscale.com/stable/ubuntu/${VERSION_CODENAME}.noarmor.gpg" | sudo tee /usr/share/keyrings/tailscale-archive-keyring.gpg >/dev/null
+                curl -fsSL "https://pkgs.tailscale.com/stable/ubuntu/${VERSION_CODENAME}.tailscale-keyring.list" | sudo tee /etc/apt/sources.list.d/tailscale.list
+                sudo apt-get update
+                sudo apt-get install tailscale
+                ;;
             fedora)
                 sudo dnf config-manager --add-repo https://pkgs.tailscale.com/stable/fedora/tailscale.repo
                 sudo dnf install tailscale

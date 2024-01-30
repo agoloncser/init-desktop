@@ -13,6 +13,9 @@ echo "Installing packages..."
 case $(uname -s) in
     Linux)
         . /etc/os-release
+        if [ -z "$ID" ] ; then
+            echo "ERROR: Cannot detect distro."
+        fi
         bash "$DIR/00_base_${ID}.sh"
         ;;
     Darwin)

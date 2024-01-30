@@ -8,6 +8,9 @@ echo "Installing Github CLI..."
 case $(uname -s) in
     Linux)
         . /etc/os-release
+        if [ -z "$ID" ] ; then
+            echo "ERROR: Cannot detect distro."
+        fi
         case $ID in
             opensuse*)
                 sudo zypper addrepo https://cli.github.com/packages/rpm/gh-cli.repo

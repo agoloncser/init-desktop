@@ -8,6 +8,9 @@ echo "Installing 1password..."
 case $(uname -s) in
     Linux)
         . /etc/os-release
+        if [ -z "$ID" ] ; then
+            echo "ERROR: Cannot detect distro."
+        fi
         case $ID in
             opensuse*)
                 sudo rpm --import https://downloads.1password.com/linux/keys/1password.asc

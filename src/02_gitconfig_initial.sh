@@ -15,6 +15,9 @@ case $(uname -s) in
     Darwin) _configure_oauth ;;
     Linux)
         . /etc/os-release
+        if [ -z "$ID" ] ; then
+            echo "ERROR: Cannot detect distro."
+        fi
         case $ID in
             fedora) _configure_oauth ;;
             ubuntu)  echo "WARNING: setup the HTTPS authentication according to README.md manually."

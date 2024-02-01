@@ -8,8 +8,11 @@ echo "Installing 1password..."
 case $(uname -s) in
     Linux)
         . /etc/os-release
-        case $ID in 
-            opensuse*) 
+        if [ -z "$ID" ] ; then
+            echo "ERROR: Cannot detect distro."
+        fi
+        case $ID in
+            opensuse*)
                 sudo rpm --import https://downloads.1password.com/linux/keys/1password.asc
                 sudo zypper addrepo https://downloads.1password.com/linux/rpm/stable/x86_64 1password || true
                 sudo zypper install 1password
@@ -31,7 +34,7 @@ case $(uname -s) in
                 sudo sh -c 'echo -e "[1password]\nname=1Password Stable Channel\nbaseurl=https://downloads.1password.com/linux/rpm/stable/\$basearch\nenabled=1\ngpgcheck=1\nrepo_gpgcheck=1\ngpgkey=\"https://downloads.1password.com/linux/keys/1password.asc\"" > /etc/yum.repos.d/1password.repo'
                 sudo dnf install 1password
                 ;;
-            *) 
+            *)
                 echo "Unsupported distro."
                 exit 0 ;;
         esac

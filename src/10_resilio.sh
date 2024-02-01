@@ -8,8 +8,11 @@ echo "Installing Resilio Sync..."
 case $(uname -s) in
     Linux)
         . /etc/os-release
-        case $ID in 
-            opensuse*) 
+        if [ -z "$ID" ] ; then
+            echo "ERROR: Cannot detect distro."
+        fi
+        case $ID in
+            opensuse*)
                 sudo rpm --import https://linux-packages.resilio.com/resilio-sync/key.asc
                 sudo zypper ar --gpgcheck-allow-unsigned-repo -f https://linux-packages.resilio.com/resilio-sync/rpm/\$basearch resilio-sync || true
                 sudo zypper install resilio-sync
@@ -25,17 +28,16 @@ case $(uname -s) in
                 printf "[resilio-sync]\nname=Resilio Sync\nbaseurl=https://linux-packages.resilio.com/resilio-sync/rpm/\$basearch\nenabled=1\ngpgcheck=1\n" | sudo tee /etc/yum.repos.d/resilio-sync.repo
                 sudo dnf install resilio-sync
                 ;;
-            *) 
+            *)
                 echo "Unsupported distro."
                 exit 0 ;;
 
         esac
-
         sudo systemctl disable resilio-sync || true
         systemctl --user enable resilio-sync
         systemctl --user start resilio-sync
         ;;
-    # Darwin) brew install --cask 1password ;;
+    Darwin) brew install --cask resilio-sync ;;
     *)
          echo "Unsupported OS."
          exit 0

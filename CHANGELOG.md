@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.20.0](https://github.com/agl4/init-desktop/compare/v0.19.0...v0.20.0) (2024-02-02)
+
+
+### Features
+
+* Add Tailscale installer ([9f9fe54](https://github.com/agl4/init-desktop/commit/9f9fe541e1430e00ec69196dfe411e8974f7f860))
+* Install 1password (optional) ([0073acc](https://github.com/agl4/init-desktop/commit/0073accdeff23acdd5357e4e2a057a956af25c43))
+* Install resilio-sync (optional) ([56a18b8](https://github.com/agl4/init-desktop/commit/56a18b89273e70368ab7426ef8f1e7e0721f8995))
+* Optional github-cli installer ([2823d47](https://github.com/agl4/init-desktop/commit/2823d475913b459214f9e85bd357e991b8a0b466))
+* Remove github trust ([cf50e5b](https://github.com/agl4/init-desktop/commit/cf50e5befcdbf4a23a8ab14d59fe4373be337834))
+
+
+### Bug Fixes
+
+* Add error checking ([a4a1de5](https://github.com/agl4/init-desktop/commit/a4a1de5ffed1e8c669b396be98f93c600c16cfcd))
+* Do not stop on unsupported OS ([b5fa94e](https://github.com/agl4/init-desktop/commit/b5fa94ee9b68c8086ee0c7ef9a0fb242361e1a77))
+* Remove deleted script from Makefile ([083a572](https://github.com/agl4/init-desktop/commit/083a572ce7149dda9bba823960bdcbfc35143c57))
+
 ## [0.19.0](https://github.com/agoloncser/init-desktop/compare/v0.18.0...v0.19.0) (2024-01-20)
 
 

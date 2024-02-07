@@ -49,8 +49,8 @@ if [ -z "$INSTALL_FAST" ] ; then
     asdf install
 
     echo "Update python packages..."
-    pip install --upgrade pip
-    pip install --user -r "$HOME/.default-python-packages"
+    pip install --upgrade --user pip
+    pip install --upgrade --user -r "$HOME/.default-python-packages"
 
     echo "Update npm packages..."
     npm update -g npm

@@ -11,9 +11,7 @@ sudo dnf install -y \
     bash \
     curl \
     fish \
-    freerdp \
     git \
-    git-credential-oauth \
     gnupg-pkcs11-scd \
     gnupg2 \
     mosh \
@@ -21,11 +19,7 @@ sudo dnf install -y \
     pass-otp \
     pcsc-lite \
     pcsc-lite-ccid \
-    rsync \
-    tmux \
-    wl-clipboard \
-    xz \
-    zsh
+    tmux
 
 # https://github.com/pyenv/pyenv/wiki#suggested-build-environment
 sudo dnf install -y \

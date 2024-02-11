@@ -15,7 +15,6 @@ sudo apt-get install -y \
     bash \
     curl \
     fish \
-    freerdp2-x11 \
     gconf2 \
     git \
     gnupg2 \
@@ -25,10 +24,9 @@ sudo apt-get install -y \
     pcscd \
     rsync \
     scdaemon \
-    tmux \
-    wl-clipboard \
-    zsh
+    tmux
 
+# https://github.com/pyenv/pyenv/wiki#suggested-build-environment
 sudo apt-get install -y \
     bash \
     build-essential \

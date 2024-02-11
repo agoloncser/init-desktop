@@ -9,14 +9,10 @@ if [ -z "$INSTALL_FAST" ] ; then
     sudo zypper dup -y
 fi
 
-    ## missing packages
-    #git-credential-oauth \
-    #gnupg-pkcs11-scd \
 sudo zypper install -y \
     bash \
     curl \
     fish \
-    freerdp \
     git \
     gpg2 \
     mosh \
@@ -24,11 +20,7 @@ sudo zypper install -y \
     pass-otp \
     pcsc-lite \
     pcsc-ccid \
-    rsync \
-    tmux \
-    wl-clipboard \
-    xz \
-    zsh
+    tmux
 
 sudo zypper install -y \
     bzip2 \

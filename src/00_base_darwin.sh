@@ -27,14 +27,11 @@ brew install \
     curl \
     fish \
     git \
-    git-credential-oauth \
     gnupg \
-    mas \
     mosh \
     openssh \
     pass \
     pass-otp \
-    rsync \
     tmux
 
 brew install --cask \
@@ -47,5 +44,4 @@ brew install \
     readline \
     sqlite3 \
     tcl-tk \
-    xz \
     zlib

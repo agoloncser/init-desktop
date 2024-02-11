@@ -4,6 +4,11 @@ set -eu
 
 DIR="$(dirname "$0")"
 
+INSTALL_FAST=${INSTALL_FAST:=""}
+if [ -n "$INSTALL_FAST" ] ; then
+    echo "WARNING: INSTALL_FAST variable set, not doing updates."
+fi
+
 echo "Create directories..."
 for i in $HOME/src $HOME/tmp ; do
     mkdir -p "$i" || true

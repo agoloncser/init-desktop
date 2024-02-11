@@ -1,4 +1,4 @@
-.PHONY : 1password resilio gh
+.PHONY : 1password resilio gh tailscale
 
 install :
 	bash src/00_base.sh

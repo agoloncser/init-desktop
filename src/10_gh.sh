@@ -43,3 +43,6 @@ case $(uname -s) in
          exit 0
          ;;
 esac
+
+gh auth login
+gh auth setup-git

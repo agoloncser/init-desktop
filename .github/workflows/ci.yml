@@ -10,7 +10,7 @@ jobs:
       matrix:
         runs_on:
           - ubuntu-latest
-          - macOS
+          - macos-latest
 
     steps:
       - name: Checkout

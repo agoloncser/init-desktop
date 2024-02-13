@@ -6,6 +6,15 @@ install :
 	bash src/02_gitconfig_initial.sh
 	bash src/04_asdf_configure.sh
 
+test :
+	fish --version
+	git --version
+	gpg --version
+	node --version
+	pass --version
+	python --version
+	tmux -V
+
 gh :
 	bash src/10_gh.sh
 

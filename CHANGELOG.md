@@ -1,5 +1,24 @@
 # Changelog
 
+## [0.21.0](https://github.com/agl4/init-desktop/compare/v0.20.0...v0.21.0) (2024-02-27)
+
+
+### Features
+
+* Authorize commands in GH install script ([a4f5317](https://github.com/agl4/init-desktop/commit/a4f53178b1b13a221c6e2c92259f648f99b8b464))
+* Remove oauth configuration ([40528d9](https://github.com/agl4/init-desktop/commit/40528d902f7ac51956766541bed7969212f3630b))
+
+
+### Bug Fixes
+
+* Fix 1Password automatic installation ([a886df0](https://github.com/agl4/init-desktop/commit/a886df027e44d6437ae0a46c8cd3179ffe0e1e8d))
+* Fix 1password installation on Ubuntu ([feabda9](https://github.com/agl4/init-desktop/commit/feabda9feb7edd52c84266c7cd8689869099258c))
+* Fix Github CLI automatic installation ([9f49ec3](https://github.com/agl4/init-desktop/commit/9f49ec3bb62b1d1636e45bc65be5622a8825d92b))
+* Fix python upgrade ([86b7511](https://github.com/agl4/init-desktop/commit/86b75116359ad72ac0a7b01dc755f2d8cc98f722))
+* Fix resilio-sync automatic installation and startup ([dc2d63a](https://github.com/agl4/init-desktop/commit/dc2d63ac79f92ab0d41d8026f0b9588092067fb3))
+* Fix tailscale automatic installation ([d50e05f](https://github.com/agl4/init-desktop/commit/d50e05f47aad44b3bb87271eed391a68152095cb))
+* Remove unused packages ([cacad2e](https://github.com/agl4/init-desktop/commit/cacad2eb901e44dc29d492a19fadd30caafab001))
+
 ## [0.20.0](https://github.com/agl4/init-desktop/compare/v0.19.0...v0.20.0) (2024-02-02)
 
 

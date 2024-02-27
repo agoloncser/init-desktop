@@ -15,7 +15,7 @@ case $(uname -s) in
             opensuse*)
                 sudo zypper addrepo https://cli.github.com/packages/rpm/gh-cli.repo
                 sudo zypper ref
-                sudo zypper install gh
+                sudo zypper install -y gh
                 ;;
             ubuntu)
                 sudo apt update && sudo apt install curl -y
@@ -28,7 +28,7 @@ case $(uname -s) in
             fedora)
                 sudo dnf install 'dnf-command(config-manager)'
                 sudo dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
-                sudo dnf install gh
+                sudo dnf install -y gh
                 ;;
             *)
                 echo "Unsupported distro."

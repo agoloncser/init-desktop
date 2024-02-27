@@ -12,10 +12,18 @@ Supports:
 
 ## Prerequisites
 
+### macOS
+
 On Darwin the following command must run to bootstrap the installation:
 
 ```shell
 xcode-select --install
+```
+
+### Ubuntu
+
+```shell
+sudo apt update && sudo apt install git make
 ```
 
 ## Install

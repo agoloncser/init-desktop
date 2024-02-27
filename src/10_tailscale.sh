@@ -24,11 +24,11 @@ case $(uname -s) in
                 curl -fsSL "https://pkgs.tailscale.com/stable/ubuntu/${VERSION_CODENAME}.noarmor.gpg" | sudo tee /usr/share/keyrings/tailscale-archive-keyring.gpg >/dev/null
                 curl -fsSL "https://pkgs.tailscale.com/stable/ubuntu/${VERSION_CODENAME}.tailscale-keyring.list" | sudo tee /etc/apt/sources.list.d/tailscale.list
                 sudo apt-get update
-                sudo apt-get install tailscale
+                sudo apt-get install -y tailscale
                 ;;
             fedora)
                 sudo dnf config-manager --add-repo https://pkgs.tailscale.com/stable/fedora/tailscale.repo
-                sudo dnf install tailscale
+                sudo dnf install -y tailscale
                 ;;
             *)
                 echo "Unsupported distro."

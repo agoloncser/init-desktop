@@ -23,7 +23,7 @@ xcode-select --install
 To install the environment run the following:
 
 ```shell
-git clone https://github.com/agoloncser/init-desktop
+git clone https://github.com/agl4/init-desktop
 cd init-desktop
 make install
 ```

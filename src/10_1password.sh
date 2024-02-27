@@ -18,6 +18,7 @@ case $(uname -s) in
                 sudo zypper install 1password
                 ;;
             ubuntu)
+                sudo apt-get update
                 sudo apt-get install -y curl
                 curl -sS https://downloads.1password.com/linux/keys/1password.asc | sudo gpg --dearmor --output /usr/share/keyrings/1password-archive-keyring.gpg
 
@@ -27,7 +28,7 @@ case $(uname -s) in
                 sudo mkdir -p /usr/share/debsig/keyrings/AC2D62742012EA22
 			    curl -sS https://downloads.1password.com/linux/keys/1password.asc | sudo gpg --dearmor --output /usr/share/debsig/keyrings/AC2D62742012EA22/debsig.gpg
 
-			    sudo apt update && sudo apt install 1password
+			    sudo apt-get update && sudo apt-get install -y 1password
                 ;;
             fedora)
                 sudo rpm --import https://downloads.1password.com/linux/keys/1password.asc

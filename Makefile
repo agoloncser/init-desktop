@@ -1,4 +1,7 @@
-.PHONY : 1password resilio gh tailscale
+.PHONY : 1password resilio gh tailscale dev
+
+dev :
+	@install -m 0700 "share/commit-hook.sh" .git/hooks/prepare-commit-msg
 
 install :
 	bash src/00_base.sh

@@ -1,4 +1,4 @@
-GitPython==3.1.42
+GitPython==3.1.43
 bumpversion==0.6.0
 pipenv==2023.12.1
 python-lsp-server[all]==1.10.0

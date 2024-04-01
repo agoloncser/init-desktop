@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.21.1](https://github.com/agl4/init-desktop/compare/v0.21.0...v0.21.1) (2024-04-01)
+
+
+### Bug Fixes
+
+* ASDF installation does not require --user ([0855ab4](https://github.com/agl4/init-desktop/commit/0855ab4e6bc90b0bf90eb0608c9e8ff752a3e964))
+
 ## [0.21.0](https://github.com/agl4/init-desktop/compare/v0.20.0...v0.21.0) (2024-02-27)
 
 

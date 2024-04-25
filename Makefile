@@ -22,13 +22,14 @@ $(info -- Running on host $(host))
 $(info -- Detected OS $(OS))
 $(info -- Detected distribution $(DISTRIBUTION))
 
-BASE_TARGETS = 
+BASE_TARGETS =
+ASDF_TARGETS =
 PACKAGES = curl fish git tmux
 
 # ... other variable declarations
 -include make/os/$(UNAME_S).mk
 -include make/distro/$(DISTRIBUTION).mk
-
+include make/asdf.mk
 
 # dev :
 # 	@install -m 0700 "share/commit-hook.sh" .git/hooks/prepare-commit-msg
@@ -49,7 +50,7 @@ git :
 
 	@install -m 0700 -d -v "${HOME}/src"
 
-deps : $(BASE_TARGETS);
+install : $(BASE_TARGETS) $(ASDF_TARGETS);
 
 # bash src/00_base.sh
 # bash src/01_gpg.sh
@@ -69,4 +70,4 @@ deps : $(BASE_TARGETS);
 # 	bash src/10_resilio.sh
 
 # .PHONY : 1password resilio gh tailscale dev dependencies
-.PHONY : deps
+.PHONY : install

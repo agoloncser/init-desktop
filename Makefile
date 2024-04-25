@@ -2,18 +2,15 @@
 # ifeq ($(OS),Windows_NT)
 # OS := win
 # else
-UNAME_S := $(shell uname -s)
-ifeq ($(UNAME_S),Linux)
-OS := linux
+OS := $(shell uname -s)
+ifeq ($(OS),Linux)
 # The distribution should be able to be portably extracted by using
 # /etc/os-release Note that there are more steps than just parsing this file on
 # certain distributions. See
 # https://gist.github.com/natefoo/814c5bf936922dad97ff for more details and
 # alternatives
 DISTRIBUTION := $(shell cat /etc/os-release | sed -n 's/^ID=\(.*\)$$/\1/p')
-endif
-ifeq ($(UNAME_S),Darwin)
-OS := macos
+VERSION_CODENAME := $(shell cat /etc/os-release | sed -n 's/^VERSION_CODENAME=\(.*\)$$/\1/p')
 endif
 
 HOST := $(shell hostname)
@@ -21,6 +18,7 @@ HOST := $(shell hostname)
 $(info -- Running on host.........: $(HOST))
 $(info -- Detected OS.............: $(OS))
 $(info -- Detected distribution...: $(DISTRIBUTION))
+$(info -- Version codename .......: $(VERSION_CODENAME))
 
 BASE_TARGETS =
 ASDF_TARGETS =

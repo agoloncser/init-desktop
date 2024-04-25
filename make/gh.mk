@@ -1,9 +1,9 @@
-gh-opensuse :
+gh-install-opensuse :
 	@sudo zypper addrepo https://cli.github.com/packages/rpm/gh-cli.repo
 	@sudo zypper ref
 	@sudo zypper install -y gh
 
-gh-ubuntu :
+gh-install-ubuntu :
 	@sudo apt-get update
 	@sudo apt-get install curl -y
 	@curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of="/usr/share/keyrings/githubcli-archive-keyring.gpg"
@@ -12,12 +12,12 @@ gh-ubuntu :
 	@sudo apt-get update
 	@sudo apt-get install gh -y
 
-gh-fedora :
+gh-install-fedora :
 	@sudo dnf install 'dnf-command(config-manager)'
 	@sudo dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
 	@sudo dnf install -y gh
 
-gh-darwin :
+gh-install-darwin :
 	@brew install gh
 
 gh-login :
@@ -28,10 +28,10 @@ gh-configure :
 
 GH_TARGETS :=
 ifeq (${OS},macos)
-GH_TARGETS += gh-darwin
+GH_TARGETS += gh-install-darwin
 endif
 ifneq (${OS},macos)
-GH_TARGETS += "gh_${DISTRIBUTION}"
+GH_TARGETS += "gh-install-${DISTRIBUTION}"
 endif
 
 GH_TARGETS += gh-configure

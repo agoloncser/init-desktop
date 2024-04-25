@@ -1,11 +1,11 @@
 # https://support.1password.com/install-linux/
 
-1password-opensuse :
+1password-install-opensuse :
 	@sudo rpm --import https://downloads.1password.com/linux/keys/1password.asc
 	@sudo zypper addrepo https://downloads.1password.com/linux/rpm/stable/x86_64 1password || true
 	@sudo zypper install -y 1password
 
-1password-ubuntu :
+1password-install-ubuntu :
 	@sudo apt-get update
 	@sudo apt-get install -y curl
 	@curl -sS https://downloads.1password.com/linux/keys/1password.asc | sudo gpg --dearmor --output /usr/share/keyrings/1password-archive-keyring.gpg
@@ -17,19 +17,20 @@
 	@sudo apt-get update
 	@sudo apt-get install -y 1password
 
-1password-fedora :
+1password-install-fedora :
 	@sudo rpm --import https://downloads.1password.com/linux/keys/1password.asc
 	@sudo sh -c 'echo -e "[1password]\nname=1Password Stable Channel\nbaseurl=https://downloads.1password.com/linux/rpm/stable/\$basearch\nenabled=1\ngpgcheck=1\nrepo_gpgcheck=1\ngpgkey=\"https://downloads.1password.com/linux/keys/1password.asc\"" > /etc/yum.repos.d/1password.repo'
 	@sudo dnf install -y 1password
 
-1password-darwin :
+1password-install-darwin :
 	@brew install --cask 1password
 
 1PASSWORD_TARGETS :=
 ifeq (${OS},macos)
-1PASSWORD_TARGETS += 1password-darwin
+1PASSWORD_TARGETS += 1password-install-darwin
 endif
 ifneq (${OS},macos)
-1PASSWORD_TARGETS += "1password_${DISTRIBUTION}"
+1PASSWORD_TARGETS += "1password-install-${DISTRIBUTION}"
 endif
+
 1password: $(1PASSWORD_TARGETS) 

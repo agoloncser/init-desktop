@@ -49,8 +49,10 @@ git :
 	$@ config --global credential.helper cache
 	$@ config --global alias.root "rev-parse --show-toplevel"
 	$@ config --global ghq.root ~/src
-
 	@install -m 0700 -d -v "${HOME}/src"
+
+caps-lock :
+	@gsettings set org.gnome.desktop.input-sources xkb-options "['caps:ctrl_modifier', 'ctrl:nocaps']"
 
 install : dev directories $(BASE_TARGETS) $(ASDF_TARGETS) $(GH_TARGETS) $(1PASSWORD_TARGETS) $(RESILIO_TARGETS) $(TAILSCALE_TARGETS);
 

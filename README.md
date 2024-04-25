@@ -12,6 +12,8 @@ Supports:
 
 ## Prerequisites
 
+Run `bootstrap.sh`, or make the changes manually:
+
 ### macOS
 
 On Darwin the following command must run to bootstrap the installation:
@@ -23,7 +25,7 @@ xcode-select --install
 ### Ubuntu
 
 ```shell
-sudo apt update && sudo apt install git make
+sudo apt-get update && sudo apt-get install -y git make
 ```
 
 ## Install

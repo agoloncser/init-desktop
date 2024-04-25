@@ -30,6 +30,7 @@ PACKAGES = curl fish git tmux
 -include make/os/$(UNAME_S).mk
 -include make/distro/$(DISTRIBUTION).mk
 include make/asdf.mk
+include make/gh.mk
 
 # dev :
 # 	@install -m 0700 "share/commit-hook.sh" .git/hooks/prepare-commit-msg
@@ -50,7 +51,7 @@ git :
 
 	@install -m 0700 -d -v "${HOME}/src"
 
-install : $(BASE_TARGETS) $(ASDF_TARGETS);
+install : $(BASE_TARGETS) $(ASDF_TARGETS) $(GH_TARGETS);
 
 # bash src/00_base.sh
 # bash src/01_gpg.sh

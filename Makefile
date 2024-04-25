@@ -42,6 +42,12 @@ gnupg :
 	install -m 0600 -v share/$@/gpg.conf       ${HOME}/.$@
 	install -m 0600 -v share/$@/gpg-agent.conf ${HOME}/.$@
 
+git :
+	$@ config --global credential.helper cache
+	$@ config --global alias.root "rev-parse --show-toplevel"
+	$@ config --global ghq.root ~/src
+
+	@install -m 0700 -d -v "${HOME}/src"
 
 deps : $(BASE_TARGETS);
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.21.2](https://github.com/agl4/init/compare/v0.21.1...v0.21.2) (2024-04-25)
+
+
+### Bug Fixes
+
+* Add autotools-language-server ([1f6288c](https://github.com/agl4/init/commit/1f6288c23c560e25a86d80a2c2892a62d9391cef)), closes [#89](https://github.com/agl4/init/issues/89)
+
 ## [0.21.1](https://github.com/agl4/init-desktop/compare/v0.21.0...v0.21.1) (2024-04-01)
 
 

@@ -16,11 +16,11 @@ ifeq ($(UNAME_S),Darwin)
 OS := macos
 endif
 
-host := $(shell hostname)
+HOST := $(shell hostname)
 # Debug information
-$(info -- Running on host $(host))
-$(info -- Detected OS $(OS))
-$(info -- Detected distribution $(DISTRIBUTION))
+$(info -- Running on host.........: $(HOST))
+$(info -- Detected OS.............: $(OS))
+$(info -- Detected distribution...: $(DISTRIBUTION))
 
 BASE_TARGETS =
 ASDF_TARGETS =
@@ -33,12 +33,13 @@ include make/asdf.mk
 include make/gh.mk
 include make/1password.mk
 
-# dev :
-# 	@install -m 0700 "share/commit-hook.sh" .git/hooks/prepare-commit-msg
+dev :
+	@install -m 0700 "share/commit-hook.sh" .git/hooks/prepare-commit-msg
 
-# directories:
-# 	@install -m 0700 "$HOME/src"
-# 	@install -m 0700 "$HOME/tmp"
+directories:
+	@install -d -m 0700 "$HOME/src"
+	@install -d -m 0700 "$HOME/tmp"
+
 gnupg :
 	install -m 0700 -v -d ${HOME}/.$@
 	install -m 0600 -v share/$@/scdaemon.conf  ${HOME}/.$@
@@ -52,7 +53,7 @@ git :
 
 	@install -m 0700 -d -v "${HOME}/src"
 
-install : $(BASE_TARGETS) $(ASDF_TARGETS) $(GH_TARGETS) $(1PASSWORD_TARGETS);
+install : dev directories $(BASE_TARGETS) $(ASDF_TARGETS) $(GH_TARGETS) $(1PASSWORD_TARGETS);
 
 # bash src/00_base.sh
 # bash src/01_gpg.sh

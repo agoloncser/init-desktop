@@ -25,7 +25,7 @@ ASDF_TARGETS =
 PACKAGES = curl fish git tmux
 
 # ... other variable declarations
--include make/os/$(UNAME_S).mk
+-include make/os/$(OS).mk
 -include make/distro/$(DISTRIBUTION).mk
 include make/asdf.mk
 include make/gh.mk

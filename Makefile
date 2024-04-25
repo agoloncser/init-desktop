@@ -54,7 +54,9 @@ git :
 caps-lock :
 	@gsettings set org.gnome.desktop.input-sources xkb-options "['caps:ctrl_modifier', 'ctrl:nocaps']"
 
-install : dev directories $(BASE_TARGETS) $(ASDF_TARGETS) $(GH_TARGETS) $(1PASSWORD_TARGETS) $(RESILIO_TARGETS) $(TAILSCALE_TARGETS);
+base: directories $(BASE_TARGETS) $(ASDF_TARGETS)
+
+install : dev base $(GH_TARGETS) $(1PASSWORD_TARGETS) $(RESILIO_TARGETS) $(TAILSCALE_TARGETS);
 
 # bash src/00_base.sh
 # bash src/01_gpg.sh

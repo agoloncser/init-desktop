@@ -23,7 +23,7 @@ xcode-select --install
 ### Ubuntu
 
 ```shell
-sudo apt update && sudo apt install git make
+sudo apt-get update && sudo apt-get install -y git make
 ```
 
 ## Install

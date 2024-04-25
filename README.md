@@ -12,6 +12,8 @@ Supports:
 
 ## Prerequisites
 
+Run `bootstrap.sh`, or make the changes manually:
+
 ### macOS
 
 On Darwin the following command must run to bootstrap the installation:

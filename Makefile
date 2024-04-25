@@ -13,12 +13,22 @@ DISTRIBUTION := $(shell cat /etc/os-release | sed -n 's/^ID=\(.*\)$$/\1/p')
 VERSION_CODENAME := $(shell cat /etc/os-release | sed -n 's/^VERSION_CODENAME=\(.*\)$$/\1/p')
 endif
 
+# INSIDE_DOCKER := $(or $(and $(wildcard /.dockerenv),1),0)
+ifneq ($(wildcard /.dockerenv),)
+    # .dockerenv file exists
+    INSIDE_DOCKER := 1
+else
+    # .dockerenv file does not exist
+    # INSIDE_DOCKER remains undefined
+endif
+
 HOST := $(shell hostname)
 # Debug information
 $(info -- Running on host.........: $(HOST))
 $(info -- Detected OS.............: $(OS))
 $(info -- Detected distribution...: $(DISTRIBUTION))
 $(info -- Version codename .......: $(VERSION_CODENAME))
+$(info -- Inside docker ..........: $(INSIDE_DOCKER))
 
 BASE_TARGETS =
 ASDF_TARGETS =

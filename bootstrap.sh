@@ -15,7 +15,9 @@ case $(uname -s) in
                 sudo apt-get update
                 sudo apt-get install -y git make
             ;;
-            fedora) ;;
+            fedora)
+                sudo dnf install -y git make
+            ;;
             *) echo "Unsupported distro: $ID"
                exit 1
                ;;
@@ -30,5 +32,9 @@ case $(uname -s) in
         ;;
 esac
 
+cat <<EOF
+Now run:
 
-echo "Not run: make install"
+    make install
+
+EOF

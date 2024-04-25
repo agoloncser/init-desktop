@@ -4,6 +4,7 @@ PACKAGES += rsync scdaemon tmux
 PACKAGES += build-essential curl libbz2-dev libffi-dev liblzma-dev
 PACKAGES += libncursesw5-dev libreadline-dev libsqlite3-dev libssl-dev
 PACKAGES += libxml2-dev libxmlsec1-dev llvm make tk-dev wget xz-utils zlib1g-dev
+PACKAGES += unzip
 
 debian-update-repos :
 	@sudo apt-get update -y
@@ -22,4 +23,8 @@ ifndef INSTALL_FAST
 BASE_TARGETS += debian-upgrade
 endif
 
-BASE_TARGETS += debian-install debian-postinstall
+BASE_TARGETS += debian-install
+
+ifndef INSIDE_DOCKER
+BASE_TARGETS += debian-postinstall
+endif

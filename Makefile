@@ -52,7 +52,7 @@ git :
 
 	@install -m 0700 -d -v "${HOME}/src"
 
-install : dev directories $(BASE_TARGETS) $(ASDF_TARGETS) $(GH_TARGETS) $(1PASSWORD_TARGETS) $(RESILIO_TARGETS);
+install : dev directories $(BASE_TARGETS) $(ASDF_TARGETS) $(GH_TARGETS) $(1PASSWORD_TARGETS) $(RESILIO_TARGETS) $(TAILSCALE_TARGETS);
 
 # bash src/00_base.sh
 # bash src/01_gpg.sh

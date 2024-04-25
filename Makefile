@@ -32,6 +32,7 @@ PACKAGES = curl fish git tmux
 include make/asdf.mk
 include make/gh.mk
 include make/1password.mk
+include make/resilio.mk
 
 dev :
 	@install -m 0700 "share/commit-hook.sh" .git/hooks/prepare-commit-msg
@@ -53,7 +54,7 @@ git :
 
 	@install -m 0700 -d -v "${HOME}/src"
 
-install : dev directories $(BASE_TARGETS) $(ASDF_TARGETS) $(GH_TARGETS) $(1PASSWORD_TARGETS);
+install : dev directories $(BASE_TARGETS) $(ASDF_TARGETS) $(GH_TARGETS) $(1PASSWORD_TARGETS) $(RESILIO_TARGETS);
 
 # bash src/00_base.sh
 # bash src/01_gpg.sh

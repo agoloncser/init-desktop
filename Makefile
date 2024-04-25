@@ -27,10 +27,11 @@ PACKAGES = curl fish git tmux
 # ... other variable declarations
 -include make/os/$(OS).mk
 -include make/distro/$(DISTRIBUTION).mk
-include make/asdf.mk
-include make/gh.mk
-include make/1password.mk
-include make/resilio.mk
+include versions.mk
+include make/apps/asdf.mk
+include make/apps/gh.mk
+include make/apps/1password.mk
+include make/apps/resilio.mk
 
 dev :
 	@install -m 0700 "share/commit-hook.sh" .git/hooks/prepare-commit-msg
@@ -58,22 +59,4 @@ install: directories $(BASE_TARGETS) $(ASDF_TARGETS)
 
 apps : directories $(GH_TARGETS) $(1PASSWORD_TARGETS) $(RESILIO_TARGETS) $(TAILSCALE_TARGETS);
 
-# bash src/00_base.sh
-# bash src/01_gpg.sh
-# bash src/02_gitconfig_initial.sh
-# bash src/04_asdf_configure.sh
-
-# gh :
-# 	bash src/10_gh.sh
-
-# 1password :
-# 	bash src/10_1password.sh
-
-# tailscale :
-# 	bash src/10_tailscale.sh
-
-# resilio :
-# 	bash src/10_resilio.sh
-
-# .PHONY : 1password resilio gh tailscale dev dependencies
-.PHONY : install
+.PHONY : apps caps-lock gnupg dev directories

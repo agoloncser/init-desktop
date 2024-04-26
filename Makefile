@@ -70,3 +70,12 @@ install: directories $(BASE_TARGETS) $(ASDF_TARGETS)
 apps : directories $(GH_TARGETS) $(1PASSWORD_TARGETS) $(RESILIO_TARGETS) $(TAILSCALE_TARGETS);
 
 .PHONY : apps caps-lock gnupg dev directories
+
+test :
+	fish --version
+	git --version
+	gpg --version
+	node --version
+	pass --version
+	python --version
+	tmux -V

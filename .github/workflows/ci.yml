@@ -10,11 +10,12 @@ jobs:
       matrix:
         runs_on:
           - ubuntu-latest
+          - macos-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Make install
-        run: make install
-        env:
-          INSTALL_FAST: 1
+        run: make install && make test
+        # env:
+        #   INSTALL_FAST: 1

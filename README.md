@@ -12,10 +12,20 @@ Supports:
 
 ## Prerequisites
 
+Run `bootstrap.sh`, or make the changes manually:
+
+### macOS
+
 On Darwin the following command must run to bootstrap the installation:
 
 ```shell
 xcode-select --install
+```
+
+### Ubuntu
+
+```shell
+sudo apt-get update && sudo apt-get install -y git make
 ```
 
 ## Install
@@ -23,7 +33,7 @@ xcode-select --install
 To install the environment run the following:
 
 ```shell
-git clone https://github.com/agoloncser/init-desktop
+git clone https://github.com/agl4/init-desktop
 cd init-desktop
 make install
 ```

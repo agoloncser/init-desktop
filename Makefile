@@ -73,5 +73,9 @@ apps : directories $(GH_TARGETS) $(1PASSWORD_TARGETS) $(RESILIO_TARGETS) $(TAILS
 
 test :
 	fish --version
+	git --version
+	gpg --version
+	node --version
+	pass --version
 	python --version
-	tmux --version
+	tmux -V

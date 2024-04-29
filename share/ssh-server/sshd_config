@@ -1,0 +1,8 @@
+# created by: scripts-init-server
+PermitRootLogin without-password
+GatewayPorts no
+X11Forwarding no
+Subsystem       sftp    /usr/libexec/sftp-server
+PasswordAuthentication no
+PubkeyAuthentication yes
+TrustedUserCAKeys /etc/ssh/TrustedUserCAKeys

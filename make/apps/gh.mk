@@ -27,10 +27,10 @@ gh-configure :
 	@gh auth setup-git
 
 GH_TARGETS :=
-ifeq (${OS},macos)
+ifeq (${OS},Darwin)
 GH_TARGETS += gh-install-darwin
 endif
-ifneq (${OS},macos)
+ifneq (${OS},Darwin)
 GH_TARGETS += "gh-install-${DISTRIBUTION}"
 endif
 

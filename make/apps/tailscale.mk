@@ -22,10 +22,10 @@ tailscale-configure-linux :
 	@sudo systemctl enable --now tailscaled
 
 TAILSCALE_TARGETS :=
-ifeq (${OS},macos)
+ifeq (${OS},Darwin)
 TAILSCALE_TARGETS += tailscale-install-darwin
 endif
-ifneq (${OS},macos)
+ifneq (${OS},Darwin)
 TAILSCALE_TARGETS += "tailscale-install-${DISTRIBUTION}" tailscale-configure-linux
 endif
 

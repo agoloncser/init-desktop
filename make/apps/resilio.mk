@@ -29,13 +29,13 @@ resilio-configure-linux :
 	@systemctl --user start resilio-sync
 
 RESILIO_TARGETS :=
-ifeq (${OS},macos)
+ifeq (${OS},Darwin)
 RESILIO_TARGETS += resilio-install-darwin
 endif
 ifeq (${OS},Linux)
 RESILIO_TARGETS += resilio-configure-linux
 endif
-ifneq (${OS},macos)
+ifneq (${OS},Darwin)
 RESILIO_TARGETS += "resilio-install-${DISTRIBUTION}"
 endif
 

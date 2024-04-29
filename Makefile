@@ -30,8 +30,10 @@ $(info -- Detected distribution...: $(DISTRIBUTION))
 $(info -- Version codename .......: $(VERSION_CODENAME))
 $(info -- Inside docker ..........: $(INSIDE_DOCKER))
 
-BASE_TARGETS =
-ASDF_TARGETS =
+BASE_TARGETS :=
+SERVER_TARGETS := 
+DESKTOP_TARGETS := 
+ASDF_TARGETS :=
 PACKAGES = curl fish git tmux
 
 # ... other variable declarations
@@ -42,6 +44,7 @@ include make/apps/asdf.mk
 include make/apps/gh.mk
 include make/apps/1password.mk
 include make/apps/resilio.mk
+include make/apps/ssh-server.mk
 
 dev :
 	@install -m 0700 "share/commit-hook.sh" .git/hooks/prepare-commit-msg
@@ -65,7 +68,8 @@ git :
 caps-lock :
 	@gsettings set org.gnome.desktop.input-sources xkb-options "['caps:ctrl_modifier', 'ctrl:nocaps']"
 
-install: directories $(BASE_TARGETS) $(ASDF_TARGETS)
+server : directories $(BASE_TARGETS) $(SERVER_TARGETS)
+desktop : directories $(BASE_TARGETS) $(DESKTOP_TARGETS)
 
 apps : directories $(GH_TARGETS) $(1PASSWORD_TARGETS) $(RESILIO_TARGETS) $(TAILSCALE_TARGETS);
 

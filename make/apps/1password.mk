@@ -26,10 +26,10 @@
 	@brew install --cask 1password
 
 1PASSWORD_TARGETS :=
-ifeq (${OS},macos)
+ifeq (${OS},Darwin)
 1PASSWORD_TARGETS += 1password-install-darwin
 endif
-ifneq (${OS},macos)
+ifneq (${OS},Darwin)
 1PASSWORD_TARGETS += "1password-install-${DISTRIBUTION}"
 endif
 

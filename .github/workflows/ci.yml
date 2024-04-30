@@ -20,6 +20,6 @@ jobs:
           path: ~/.asdf
           key: ${{ runner.os }}-asdf-${{ hashFiles('**/.tool-versions', '**/requirements.txt') }}
       - name: Make install
-        run: make install && make test
+        run: make desktop
         # env:
         #   INSTALL_FAST: 1

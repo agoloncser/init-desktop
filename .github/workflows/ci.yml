@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v4
       - uses: actions/cache@v3
         with:
-          path: .asdf
+          path: ~/.asdf
           key: ${{ runner.os }}-asdf-${{ hashFiles('**/.tool-versions', '**/requirements.txt') }}
       - name: Make install
         run: make desktop

@@ -40,4 +40,4 @@ endif
 ASDF_TARGETS += ${HOME}/.default-python-packages ${HOME}/.default-npm-packages asdf-setup-bashrc
 
 asdf: $(ASDF_TARGETS)
-
+DESKTOP_TARGETS += asdf

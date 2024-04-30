@@ -1,6 +1,6 @@
 .PHONY : freebsd-pkg-update freebsd-pkg-upgrade freebsd-base
 
-PACKAGES += bash curl fish git mosh rsync sudo tmux
+PACKAGES += bash curl fish git mosh rsync sudo tmux fzf
 
 freebsd-pkg-update :
 	@pkg update

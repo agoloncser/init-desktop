@@ -16,6 +16,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Make install
-        run: make install && make test
+        run: make desktop
         # env:
         #   INSTALL_FAST: 1

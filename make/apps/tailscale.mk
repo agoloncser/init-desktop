@@ -31,3 +31,5 @@ endif
 
 
 tailscale: $(TAILSCALE_TARGETS) 
+
+.PHONY : tailscale tailscale-install-opensuse tailscale-install-ubuntu tailscale-install-fedora tailscale-install-darwin tailscale-configure-linux

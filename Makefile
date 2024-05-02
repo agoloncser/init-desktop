@@ -1,4 +1,5 @@
 OS := $(shell uname -s)
+ARCHITECTURE := $(shell uname -m)
 ifeq ($(OS),Linux)
 DISTRIBUTION := $(shell cat /etc/os-release | sed -n 's/^ID=\(.*\)$$/\1/p')
 VERSION_CODENAME := $(shell cat /etc/os-release | sed -n 's/^VERSION_CODENAME=\(.*\)$$/\1/p')
@@ -19,6 +20,7 @@ $(info -- Running on host.........: $(HOST))
 $(info -- Detected OS.............: $(OS))
 $(info -- Detected distribution...: $(DISTRIBUTION))
 $(info -- Version codename .......: $(VERSION_CODENAME))
+$(info -- Version codename .......: $(ARCHITECTURE))
 $(info -- Inside docker ..........: $(INSIDE_DOCKER))
 
 BASE_TARGETS :=
@@ -36,6 +38,7 @@ include make/apps/gh.mk
 include make/apps/1password.mk
 include make/apps/resilio.mk
 include make/apps/ssh-server.mk
+include make/apps/tailscale.mk
 
 dev :
 	@install -m 0700 "share/commit-hook.sh" .git/hooks/prepare-commit-msg
@@ -61,10 +64,11 @@ caps-lock :
 
 server : directories $(BASE_TARGETS) $(SERVER_TARGETS)
 desktop : directories $(BASE_TARGETS) $(DESKTOP_TARGETS)
+install : desktop
 
 apps : directories $(GH_TARGETS) $(1PASSWORD_TARGETS) $(RESILIO_TARGETS) $(TAILSCALE_TARGETS);
 
-.PHONY : apps caps-lock gnupg dev directories
+.PHONY : apps caps-lock gnupg dev directories server desktop install
 
 test :
 	fish --version

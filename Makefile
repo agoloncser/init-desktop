@@ -1,4 +1,5 @@
 OS := $(shell uname -s)
+ARCHITECTURE := $(shell uname -m)
 ifeq ($(OS),Linux)
 DISTRIBUTION := $(shell cat /etc/os-release | sed -n 's/^ID=\(.*\)$$/\1/p')
 VERSION_CODENAME := $(shell cat /etc/os-release | sed -n 's/^VERSION_CODENAME=\(.*\)$$/\1/p')

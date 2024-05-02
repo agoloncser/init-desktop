@@ -20,6 +20,7 @@ $(info -- Running on host.........: $(HOST))
 $(info -- Detected OS.............: $(OS))
 $(info -- Detected distribution...: $(DISTRIBUTION))
 $(info -- Version codename .......: $(VERSION_CODENAME))
+$(info -- Version codename .......: $(ARCHITECTURE))
 $(info -- Inside docker ..........: $(INSIDE_DOCKER))
 
 BASE_TARGETS :=

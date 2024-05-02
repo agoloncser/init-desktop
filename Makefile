@@ -64,10 +64,11 @@ caps-lock :
 
 server : directories $(BASE_TARGETS) $(SERVER_TARGETS)
 desktop : directories $(BASE_TARGETS) $(DESKTOP_TARGETS)
+install : desktop
 
 apps : directories $(GH_TARGETS) $(1PASSWORD_TARGETS) $(RESILIO_TARGETS) $(TAILSCALE_TARGETS);
 
-.PHONY : apps caps-lock gnupg dev directories
+.PHONY : apps caps-lock gnupg dev directories server desktop install
 
 test :
 	fish --version

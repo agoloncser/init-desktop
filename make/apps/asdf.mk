@@ -34,9 +34,7 @@ asdf-upgrade: $(ASDF)
 asdf-setup-bashrc:
 	grep '\.asdf/asdf.sh' ${HOME}/.bashrc || echo '. "${HOME}/.asdf/asdf.sh"' >> ${HOME}/.bashrc
 
-ifndef INSTALL_FAST
 ASDF_TARGETS += ${HOME}/.tool-versions asdf-upgrade
-endif
 ASDF_TARGETS += ${HOME}/.default-python-packages ${HOME}/.default-npm-packages asdf-setup-bashrc
 
 asdf: $(ASDF_TARGETS)

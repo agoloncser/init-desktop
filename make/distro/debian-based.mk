@@ -1,4 +1,4 @@
-PACKAGES += bash curl fish gconf2 git gnupg2 mosh pass pass-extension-otp pcscd
+PACKAGES += bash curl fish git gnupg2 mosh pass pass-extension-otp pcscd
 PACKAGES += rsync scdaemon tmux
 # https://github.com/pyenv/pyenv/wiki#suggested-build-environment
 PACKAGES += build-essential curl libbz2-dev libffi-dev liblzma-dev

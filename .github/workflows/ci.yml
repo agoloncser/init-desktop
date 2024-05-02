@@ -18,7 +18,7 @@ jobs:
       - uses: actions/cache@v3
         with:
           path: ~/.asdf
-          key: ${{ runner.os }}-asdf-${{ hashFiles('share/asdf/.*', 'share/asdf/*', '**/.tool-versions', '**/requirements.txt') }}
+          key: ${{ runner.os }}-asdf-${{ hashFiles('**/.tool-versions', '**/requirements.txt') }}
       - name: Make install
         run: make desktop
         # env:

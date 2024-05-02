@@ -38,6 +38,7 @@ include make/apps/gh.mk
 include make/apps/1password.mk
 include make/apps/resilio.mk
 include make/apps/ssh-server.mk
+include make/apps/tailscale.mk
 
 dev :
 	@install -m 0700 "share/commit-hook.sh" .git/hooks/prepare-commit-msg

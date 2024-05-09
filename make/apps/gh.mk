@@ -31,7 +31,7 @@ ifeq (${OS},Darwin)
 GH_TARGETS += gh-install-darwin
 endif
 ifneq (${OS},Darwin)
-GH_TARGETS += "gh-install-${DISTRIBUTION}"
+GH_TARGETS += gh-install-${DISTRIBUTION}
 endif
 
 GH_TARGETS += gh-configure

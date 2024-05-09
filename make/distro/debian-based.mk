@@ -1,5 +1,7 @@
 PACKAGES += bash curl fish git gnupg2 mosh pass pass-extension-otp pcscd
 PACKAGES += rsync scdaemon tmux fzf emacs
+PACKAGES += hunspell hunspell-hu hunspell-en-gb hunspell-en-us
+
 # https://github.com/pyenv/pyenv/wiki#suggested-build-environment
 PACKAGES += build-essential curl libbz2-dev libffi-dev liblzma-dev
 PACKAGES += libncursesw5-dev libreadline-dev libsqlite3-dev libssl-dev

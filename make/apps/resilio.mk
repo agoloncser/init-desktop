@@ -36,7 +36,7 @@ ifeq (${OS},Linux)
 RESILIO_TARGETS += resilio-configure-linux
 endif
 ifneq (${OS},Darwin)
-RESILIO_TARGETS += "resilio-install-${DISTRIBUTION}"
+RESILIO_TARGETS += resilio-install-${DISTRIBUTION}
 endif
 
 resilio: $(RESILIO_TARGETS) 

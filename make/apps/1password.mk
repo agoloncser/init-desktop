@@ -30,7 +30,7 @@ ifeq (${OS},Darwin)
 1PASSWORD_TARGETS += 1password-install-darwin
 endif
 ifneq (${OS},Darwin)
-1PASSWORD_TARGETS += "1password-install-${DISTRIBUTION}"
+1PASSWORD_TARGETS += 1password-install-${DISTRIBUTION}
 endif
 
 1password: $(1PASSWORD_TARGETS) 

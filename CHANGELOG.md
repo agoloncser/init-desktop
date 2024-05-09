@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.22.0](https://github.com/agl4/init/compare/v0.21.2...v0.22.0) (2024-05-09)
+
+
+### Features
+
+* Add initial FreeBSD support ([d3bd935](https://github.com/agl4/init/commit/d3bd9351cd5f65d0b3266cbb49b563c1b1aa5ce3))
+* Add initial FreeBSD support ([e264be0](https://github.com/agl4/init/commit/e264be02938dc682ae5ee7e1b8333d6bef8047fe))
+* Add server targets and ssh-server configuration ([c616e14](https://github.com/agl4/init/commit/c616e1471914884bb15dd91ed91a8bae77964527))
+* Add server targets and ssh-server configuration ([dfbf09d](https://github.com/agl4/init/commit/dfbf09da3a061f525b17b78344ddd13091f85fa1))
+* Install hunspell ([8cd0c15](https://github.com/agl4/init/commit/8cd0c15d1bcda2f0068ca2d8383e36dd4e1d048e))
+
+
+### Bug Fixes
+
+* Add emacs package ([2f4f780](https://github.com/agl4/init/commit/2f4f780a6914a5417f0da8f0e8bb27b71ea797c9))
+* Makefile syntax for Darwin OS ([ab804ca](https://github.com/agl4/init/commit/ab804ca78c70d73c6c87f98978410c91948ce5e6))
+* Makefile syntax for Darwin OS ([abaa532](https://github.com/agl4/init/commit/abaa532f13b4ddb09afa47506284288657ee6b5e))
+
 ## [0.21.2](https://github.com/agl4/init/compare/v0.21.1...v0.21.2) (2024-04-25)
 
 

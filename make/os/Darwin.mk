@@ -4,7 +4,7 @@ ifeq ($(UNAME_A),x86_64)
 BREW := /usr/local/bin/brew
 endif
 
-PACKAGES += curl fish git gnupg mosh openssh pass pass-otp tmux fzf
+PACKAGES += curl fish git gnupg mosh openssh pass pass-otp tmux fzf git-lfs
 # https://github.com/pyenv/pyenv/wiki#suggested-build-environment
 PACKAGES += openssl readline sqlite3 tcl-tk zlib
 PACKAGES_CASKS := gpg-suite-no-mail emacs

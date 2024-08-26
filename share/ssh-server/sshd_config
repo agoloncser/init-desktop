@@ -1,4 +1,3 @@
-# created by: scripts-init-server
 PermitRootLogin without-password
 GatewayPorts no
 X11Forwarding no

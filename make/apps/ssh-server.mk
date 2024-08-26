@@ -1,17 +1,11 @@
-
-SSH_SRC := share/ssh-server
+SSH_SRC := ./share/ssh-server
 SSH_TARGET := /etc/ssh
-SSH_CONFIGS := ${SSH_SRC}/sshd_config ${SSH_SRC}/TrustedUserCAKeys
+SSH_CONFIGS := sshd_config TrustedUserCAKeys
 
 SSH_TARGETS := $(subst ${SSH_SRC},${SSH_TARGET},$(SSH_CONFIGS))
 
-$(SSH_TARGETS) : $(SSH_CONFIGS)
-	ifneq ($(wildcard $@),)
-		grep 'scripts-init-server$' $@ || sudo cp $< $@
-	else
-		sudo cp $< $@
-	endif
-
+$(SSH_TARGET)/%: $(SSH_SRC)/%:
+	sudo install -m 0600 -v $< $@
 	ifeq (${OS},Linux)
 		sudo systemctl enable ssh
 		sudo systemctl restart ssh
@@ -21,6 +15,6 @@ $(SSH_TARGETS) : $(SSH_CONFIGS)
 		service sshd restart
 	endif
 
-ssh-server : $(SSH_TARGETS)
+ssh-server : $(addprefix $(SSH_TARGET)/, $(SSH_CONFIGS))
 
 SERVER_TARGETS += ssh-server

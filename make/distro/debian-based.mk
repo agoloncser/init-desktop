@@ -6,7 +6,7 @@ PACKAGES += hunspell hunspell-hu hunspell-en-gb hunspell-en-us
 PACKAGES += build-essential curl libbz2-dev libffi-dev liblzma-dev
 PACKAGES += libncursesw5-dev libreadline-dev libsqlite3-dev libssl-dev
 PACKAGES += libxml2-dev libxmlsec1-dev llvm make tk-dev wget xz-utils zlib1g-dev
-PACKAGES += unzip
+PACKAGES += unzip openssh-server
 
 debian-update-repos :
 	@sudo apt-get update -y

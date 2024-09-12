@@ -45,3 +45,17 @@ scripts. This will also skip compiling everything from source with `asdf`.
 ```shell
 INSTALL_FAST=1 make install
 ```
+
+## Github authentication
+
+To authenticate git over HTTPS with GitHub use:
+
+```shell
+gh auth login -p https
+```
+
+Also setup `gh` authentication to `.gitconfig`:
+
+```shell
+gh auth setup-git
+```

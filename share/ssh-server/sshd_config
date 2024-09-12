@@ -4,4 +4,6 @@ X11Forwarding no
 Subsystem       sftp    /usr/libexec/sftp-server
 PasswordAuthentication no
 PubkeyAuthentication yes
+Ciphers aes256-ctr,aes192-ctr,aes128-ctr
+KexAlgorithms diffie-hellman-group-exchange-sha256
 TrustedUserCAKeys /etc/ssh/TrustedUserCAKeys

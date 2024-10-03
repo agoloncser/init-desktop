@@ -26,6 +26,9 @@ case $(uname -s) in
     Darwin)
         xcode-select --install
         ;;
+    FreeBSD)
+        pkg install -y git curl gmake fish tmux
+        ;;
     *)
         echo "Unsupported OS."
         exit 1

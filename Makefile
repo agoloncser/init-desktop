@@ -39,6 +39,7 @@ include make/apps/1password.mk
 include make/apps/resilio.mk
 include make/apps/ssh-server.mk
 include make/apps/tailscale.mk
+include make/apps/warp.mk
 
 dev :
 	@install -m 0700 "share/commit-hook.sh" .git/hooks/prepare-commit-msg
@@ -66,7 +67,7 @@ server : directories $(BASE_TARGETS) $(SERVER_TARGETS)
 desktop : directories $(BASE_TARGETS) $(DESKTOP_TARGETS)
 install : desktop
 
-apps : directories $(GH_TARGETS) $(1PASSWORD_TARGETS) $(RESILIO_TARGETS) $(TAILSCALE_TARGETS);
+apps : directories $(GH_TARGETS) $(1PASSWORD_TARGETS) $(RESILIO_TARGETS) $(TAILSCALE_TARGETS) $(WARP_TARGETS);
 
 .PHONY : apps caps-lock gnupg dev directories server desktop install
 

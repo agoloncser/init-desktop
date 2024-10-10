@@ -4,11 +4,11 @@ PACKAGES += bash curl fish git mosh rsync sudo tmux fzf
 PACKAGES += hunspell en-hunspell hu-hunspell
 
 freebsd-pkg-update :
-	@pkg update
+	@pkg update -f
 
 freebsd-pkg-upgrade :
-	@pkg upgrade -y
-	@freebsd-update fetch install
+	@export ASSUME_ALWAYS_YES=YES ; pkg upgrade -y
+	@export PAGER=cat ; freebsd-update fetch install --not-running-from-cron
 
 freebsd-base : freebsd-pkg-update
 	@pkg install -y $(PACKAGES)

@@ -27,7 +27,9 @@ case $(uname -s) in
         xcode-select --install
         ;;
     FreeBSD)
-        pkg install -y git gmake fish tmux sudo
+        export ASSUME_ALWAYS_YES=YES
+        pkg update -f
+        pkg install -y git sudo mosh python fish tmux gmake
         ;;
     *)
         echo "Unsupported OS."

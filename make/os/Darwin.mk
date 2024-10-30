@@ -13,14 +13,14 @@ $(BREW) :
 	@bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 darwin-brew-update : | $(BREW)
-	@brew update
+	@${BREW} update
 
 darwin-brew-upgrade : | $(BREW)
-	@brew update
+	@${BREW} update
 
 darwin-base : | $(BREW)
-	@brew install $(PACKAGES)
-	@brew install --cask $(PACKAGES_CASKS)
+	@${BREW} install $(PACKAGES)
+	@${BREW} install --cask $(PACKAGES_CASKS)
 
 ifndef INSTALL_FAST
 BASE_TARGETS += darwin-brew-update

@@ -6,7 +6,7 @@ endif
 
 PACKAGES += curl fish git gnupg mosh openssh pass pass-otp tmux fzf git-lfs
 # https://github.com/pyenv/pyenv/wiki#suggested-build-environment
-PACKAGES += openssl readline sqlite3 tcl-tk zlib
+PACKAGES += openssl readline sqlite3 tcl-tk zlib ripgrep
 PACKAGES_CASKS := gpg-suite-no-mail emacs
 
 $(BREW) :

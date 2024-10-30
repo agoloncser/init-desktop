@@ -22,6 +22,13 @@ darwin-base : | $(BREW)
 	@${BREW} install $(PACKAGES)
 	@${BREW} install --cask $(PACKAGES_CASKS)
 
+brew-setup-shell:
+	@grep 'brew\ shellenv' ${HOME}/.bashrc || echo 'eval "$$(${BREW} shellenv)"' >> ${HOME}/.bashrc
+	@grep 'brew\ shellenv' ${HOME}/.zshrc || echo 'eval "$$(${BREW} shellenv)"' >> ${HOME}/.zshrc
+
+ASDF_TARGETS += ${HOME}/.tool-versions asdf-upgrade
+ASDF_TARGETS += ${HOME}/.default-python-packages ${HOME}/.default-npm-packages asdf-setup-shell
+
 ifndef INSTALL_FAST
 BASE_TARGETS += darwin-brew-update
 BASE_TARGETS += darwin-brew-upgrade

@@ -22,8 +22,6 @@ gh-install-darwin :
 
 gh-login :
 	@gh auth login
-
-gh-configure :
 	@gh auth setup-git
 
 GH_TARGETS :=
@@ -33,7 +31,5 @@ endif
 ifneq (${OS},Darwin)
 GH_TARGETS += gh-install-${DISTRIBUTION}
 endif
-
-GH_TARGETS += gh-configure
 
 gh: $(GH_TARGETS) 

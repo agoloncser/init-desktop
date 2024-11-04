@@ -1,5 +1,5 @@
 PACKAGES += bash curl fish git gnupg2 mosh pass pass-extension-otp pcscd
-PACKAGES += rsync scdaemon tmux fzf emacs git-lfs ripgrep
+PACKAGES += rsync scdaemon tmux fzf emacs git-lfs git-annex ripgrep
 PACKAGES += hunspell hunspell-hu hunspell-en-gb hunspell-en-us
 
 # https://github.com/pyenv/pyenv/wiki#suggested-build-environment

@@ -1,5 +1,30 @@
 # Changelog
 
+## [0.23.0](https://github.com/agl4/init/compare/v0.22.0...v0.23.0) (2024-11-04)
+
+
+### Features
+
+* Cloudflare WARP client ([6c0cfd9](https://github.com/agl4/init/commit/6c0cfd9f5240f1f4561bdad3758f21e48d7170cb))
+
+
+### Bug Fixes
+
+* Add FreeBSD bootstrapping ([e3a8f36](https://github.com/agl4/init/commit/e3a8f360e895863eaf3075fe0167f15a3ed231f1))
+* Add git-annex package ([8eb77c7](https://github.com/agl4/init/commit/8eb77c7a89ec94d4b799476c5d8e4439fd2082cd))
+* Add MACs to sshd config ([1edf820](https://github.com/agl4/init/commit/1edf820fc87ac8f7821b9b49fc4b9efd5d788b41))
+* Add missing ripgrep package ([93ff4e7](https://github.com/agl4/init/commit/93ff4e7dfb2fc00c6db1a8c468184aa696f3beae))
+* Add ssh server ([acac19e](https://github.com/agl4/init/commit/acac19e259eccc33c877382e07430b478713d571))
+* Add sudo package ([78b6add](https://github.com/agl4/init/commit/78b6add06ca2cf216704007fef8dce97d1e9978d))
+* Fix homebrew invocation ([21679e6](https://github.com/agl4/init/commit/21679e649da91a0ecd196c413e1ce64579dd5057))
+* FreeBSD fixes ([15bc1ac](https://github.com/agl4/init/commit/15bc1ac3af8f25ee9dc385f95c7aff14c7e5fdb0))
+* Harden sshd ciphers and algos ([f1f4a0f](https://github.com/agl4/init/commit/f1f4a0fd7bc097606679fbc2f77b24a5d32a2ace)), closes [#114](https://github.com/agl4/init/issues/114)
+* Install git-lfs ([0dd40a0](https://github.com/agl4/init/commit/0dd40a0df66f7536ab60919aef46731922e8e62c)), closes [#112](https://github.com/agl4/init/issues/112)
+* Make gh auth manual ([1e47575](https://github.com/agl4/init/commit/1e47575b9c230d1188f1d21a30e311cce51d5596))
+* Remove broken autotools-language-server ([c61014d](https://github.com/agl4/init/commit/c61014ddc9512bcd09e536d0525858935e607c18))
+* Setup shells correctly ([994a918](https://github.com/agl4/init/commit/994a918120e07fa69e9a81f896fa862d5b695055))
+* ssh-server installation ([57ddbfa](https://github.com/agl4/init/commit/57ddbfa4dcb7ba4871b0f0468bb5b0d2c0dbfbc3)), closes [#108](https://github.com/agl4/init/issues/108)
+
 ## [0.22.0](https://github.com/agl4/init/compare/v0.21.2...v0.22.0) (2024-05-09)
 
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.23.1](https://github.com/agl4/init/compare/v0.23.0...v0.23.1) (2024-11-12)
+
+
+### Bug Fixes
+
+* **warp:** Fix WARP installation ([b296184](https://github.com/agl4/init/commit/b2961844aaeb6c7acb6ebf0c5e9a73054349c16d))
+
 ## [0.23.0](https://github.com/agl4/init/compare/v0.22.0...v0.23.0) (2024-11-04)
 
 

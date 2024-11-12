@@ -24,9 +24,9 @@ ifeq (${OS},Darwin)
 WARP_TARGETS += warp-install-darwin
 endif
 ifneq (${OS},Darwin)
-WARP_TARGETS += "warp-install-${DISTRIBUTION}" warp-configure-linux
+WARP_TARGETS += warp-install-${DISTRIBUTION} warp-configure-linux
 endif
 
-tailscale: $(TAILSCALE_TARGETS)
+warp: $(WARP_TARGETS)
 
 .PHONY : warp warp-install-ubuntu warp-install-fedora warp-install-darwin warp-configure-linux

@@ -31,11 +31,12 @@ asdf-upgrade: $(ASDF)
 	@ASDF_DIR=${HOME}/.asdf; . "${HOME}/.asdf/asdf.sh" && asdf update
 	@ASDF_DIR=${HOME}/.asdf; . "${HOME}/.asdf/asdf.sh" && asdf plugin-update --all
 
-asdf-setup-bashrc:
-	grep '\.asdf/asdf.sh' ${HOME}/.bashrc || echo '. "${HOME}/.asdf/asdf.sh"' >> ${HOME}/.bashrc
+asdf-setup-shell:
+	@grep '\.asdf/asdf.sh' ${HOME}/.bashrc || echo '. "${HOME}/.asdf/asdf.sh"' >> ${HOME}/.bashrc
+	@grep '\.asdf/asdf.sh' ${HOME}/.zshrc || echo '. "${HOME}/.asdf/asdf.sh"' >> ${HOME}/.zshrc
 
 ASDF_TARGETS += ${HOME}/.tool-versions asdf-upgrade
-ASDF_TARGETS += ${HOME}/.default-python-packages ${HOME}/.default-npm-packages asdf-setup-bashrc
+ASDF_TARGETS += ${HOME}/.default-python-packages ${HOME}/.default-npm-packages asdf-setup-shell
 
 asdf: $(ASDF_TARGETS)
 DESKTOP_TARGETS += asdf

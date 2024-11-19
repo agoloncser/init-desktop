@@ -1,6 +1,6 @@
-UNAME_A := $(shell uname -a)
+UNAME_M := $(shell uname -m)
 BREW := /opt/homebrew/bin/brew
-ifeq ($(UNAME_A),x86_64)
+ifeq ($(UNAME_M),x86_64)
 BREW := /usr/local/bin/brew
 endif
 

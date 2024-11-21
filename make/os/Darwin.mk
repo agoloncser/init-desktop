@@ -6,7 +6,7 @@ endif
 
 PACKAGES += curl fish git gnupg mosh openssh pass pass-otp tmux fzf git-lfs git-annex
 # https://github.com/pyenv/pyenv/wiki#suggested-build-environment
-PACKAGES += openssl readline sqlite3 tcl-tk zlib ripgrep
+PACKAGES += openssl readline sqlite3 tcl-tk zlib ripgrep hunspell
 PACKAGES_CASKS := gpg-suite-no-mail emacs
 
 $(BREW) :
@@ -26,6 +26,10 @@ brew-setup-shell:
 	@grep 'brew\ shellenv' ${HOME}/.bashrc || echo 'eval "$$(${BREW} shellenv)"' >> ${HOME}/.bashrc
 	@grep 'brew\ shellenv' ${HOME}/.zshrc || echo 'eval "$$(${BREW} shellenv)"' >> ${HOME}/.zshrc
 
+hunspell_install_dictionaries:
+	@bash share/darwin-install-hunspell-dictionaries.sh
+
+
 ASDF_TARGETS += ${HOME}/.tool-versions asdf-upgrade
 ASDF_TARGETS += ${HOME}/.default-python-packages ${HOME}/.default-npm-packages asdf-setup-shell
 
@@ -34,3 +38,4 @@ BASE_TARGETS += darwin-brew-update
 BASE_TARGETS += darwin-brew-upgrade
 endif
 BASE_TARGETS += darwin-base
+BASE_TARGETS += hunspell_install_dictionaries

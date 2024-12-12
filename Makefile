@@ -55,8 +55,8 @@ dev :
 	@install -m 0700 "share/commit-hook.sh" .git/hooks/prepare-commit-msg
 
 directories:
-	@install -d -m 0700 "$HOME/src"
-	@install -d -m 0700 "$HOME/tmp"
+	@install -d -m 0700 "${HOME}/src"
+	@install -d -m 0700 "${HOME}/tmp"
 
 gnupg :
 	install -m 0700 -v -d ${HOME}/.$@

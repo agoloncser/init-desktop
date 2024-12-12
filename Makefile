@@ -13,6 +13,8 @@ ifeq ($(OS),Linux)
 DISTRIBUTION := $(shell cat /etc/os-release | sed -n 's/^ID=\(.*\)$$/\1/p')
 VERSION_CODENAME := $(shell cat /etc/os-release | sed -n 's/^VERSION_CODENAME=\(.*\)$$/\1/p')
 endif
+SRCDIR := ./src
+PREFIX ?= ${HOME}/.local/bin
 
 # INSIDE_DOCKER := $(or $(and $(wildcard /.dockerenv),1),0)
 ifneq ($(wildcard /.dockerenv),)
@@ -34,8 +36,8 @@ $(info -- Inside docker ..........: $(INSIDE_DOCKER))
 
 # Target definitions
 BASE_TARGETS :=
-SERVER_TARGETS := 
-DESKTOP_TARGETS := 
+SERVER_TARGETS :=
+DESKTOP_TARGETS :=
 ASDF_TARGETS :=
 PACKAGES = curl fish git tmux
 
@@ -50,6 +52,7 @@ include make/apps/resilio.mk
 include make/apps/ssh-server.mk
 include make/apps/tailscale.mk
 include make/apps/warp.mk
+include make/apps/fish.mk
 
 dev :
 	@install -m 0700 "share/commit-hook.sh" .git/hooks/prepare-commit-msg

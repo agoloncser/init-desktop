@@ -53,6 +53,7 @@ include make/apps/ssh-server.mk
 include make/apps/tailscale.mk
 include make/apps/warp.mk
 include make/apps/fish.mk
+include make/apps/git.mk
 
 dev :
 	@install -m 0700 "share/commit-hook.sh" .git/hooks/prepare-commit-msg

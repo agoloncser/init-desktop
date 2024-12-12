@@ -55,6 +55,7 @@ include make/apps/warp.mk
 include make/apps/fish.mk
 include make/apps/git.mk
 include make/apps/gpg.mk
+include make/apps/tmux.mk
 
 dev :
 	@install -m 0700 "share/commit-hook.sh" .git/hooks/prepare-commit-msg

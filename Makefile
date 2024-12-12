@@ -54,6 +54,7 @@ include make/apps/tailscale.mk
 include make/apps/warp.mk
 include make/apps/fish.mk
 include make/apps/git.mk
+include make/apps/gpg.mk
 
 dev :
 	@install -m 0700 "share/commit-hook.sh" .git/hooks/prepare-commit-msg
@@ -61,12 +62,6 @@ dev :
 directories:
 	@install -d -m 0700 "${HOME}/src"
 	@install -d -m 0700 "${HOME}/tmp"
-
-gnupg :
-	install -m 0700 -v -d ${HOME}/.$@
-	install -m 0600 -v share/$@/scdaemon.conf  ${HOME}/.$@
-	install -m 0600 -v share/$@/gpg.conf       ${HOME}/.$@
-	install -m 0600 -v share/$@/gpg-agent.conf ${HOME}/.$@
 
 caps-lock :
 	@gsettings set org.gnome.desktop.input-sources xkb-options "['caps:ctrl_modifier', 'ctrl:nocaps']"
@@ -83,14 +78,13 @@ $(OS_SCRIPTS) :
 install : $(SCRIPTS) $(OS_SCRIPTS)
 	@ln -f ${PREFIX}/keys.sh ${PREFIX}/keys
 	@ln -f ${PREFIX}/keys.sh ${PREFIX}/keys_week
-	@ln -f ${PREFIX}/bucket.sh ${PREFIX}/bucket
 
-server  : install directories gnupg git $(BASE_TARGETS) $(SERVER_TARGETS)
-desktop : install directories gnupg git $(BASE_TARGETS) $(DESKTOP_TARGETS)
+server  : install directories $(BASE_TARGETS) $(SERVER_TARGETS)
+desktop : install directories $(BASE_TARGETS) $(DESKTOP_TARGETS)
 
 apps : directories $(GH_TARGETS) $(1PASSWORD_TARGETS) $(RESILIO_TARGETS) $(TAILSCALE_TARGETS) $(WARP_TARGETS);
 
-.PHONY : apps caps-lock gnupg dev directories server desktop install
+.PHONY : apps caps-lock dev directories server desktop install
 
 test :
 	fish --version

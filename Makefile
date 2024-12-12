@@ -76,9 +76,22 @@ git :
 caps-lock :
 	@gsettings set org.gnome.desktop.input-sources xkb-options "['caps:ctrl_modifier', 'ctrl:nocaps']"
 
-server  : directories gnupg git $(BASE_TARGETS) $(SERVER_TARGETS)
-desktop : directories gnupg git $(BASE_TARGETS) $(DESKTOP_TARGETS)
-install : desktop
+SCRIPTS := $(addprefix ${PREFIX}/,$(notdir $(wildcard ${SRCDIR}/shell/*.sh)))
+$(SCRIPTS) : $(wildcard ${SRCDIR}/shell/*.sh)
+	@install -m 0700 -v -d ${PREFIX}
+	@install -m 0700 -v ${SRCDIR}/shell/$(notdir $@) $@
+OS_SCRIPTS := $(addprefix ${PREFIX}/,$(notdir $(wildcard ${SRCDIR}/os/${OS}/*)))
+$(OS_SCRIPTS) :
+	@install -m 0700 -v -d "${PREFIX}"
+	@install -m 0700 -v "${SRCDIR}/os/${OS}/$(notdir $@)" "$@"
+
+install : $(SCRIPTS) $(OS_SCRIPTS)
+	@ln -f ${PREFIX}/keys.sh ${PREFIX}/keys
+	@ln -f ${PREFIX}/keys.sh ${PREFIX}/keys_week
+	@ln -f ${PREFIX}/bucket.sh ${PREFIX}/bucket
+
+server  : install directories gnupg git $(BASE_TARGETS) $(SERVER_TARGETS)
+desktop : install directories gnupg git $(BASE_TARGETS) $(DESKTOP_TARGETS)
 
 apps : directories $(GH_TARGETS) $(1PASSWORD_TARGETS) $(RESILIO_TARGETS) $(TAILSCALE_TARGETS) $(WARP_TARGETS);
 

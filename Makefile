@@ -1,3 +1,12 @@
+#
+# Source for configs:
+#
+# - https://makefiletutorial.com/#makefile-cookbook
+# - https://lunarwatcher.github.io/posts/2024/01/06/how-to-set-up-a-makefile-for-managing-dotfiles-and-system-configurations.html
+# - https://polothy.github.io/post/2018-10-09-makefile-dotfiles/
+# - https://github.com/masasam/dotfiles/blob/master/Makefile
+#
+
 OS := $(shell uname -s)
 ARCHITECTURE := $(shell uname -m)
 ifeq ($(OS),Linux)
@@ -23,6 +32,7 @@ $(info -- Version codename .......: $(VERSION_CODENAME))
 $(info -- Version codename .......: $(ARCHITECTURE))
 $(info -- Inside docker ..........: $(INSIDE_DOCKER))
 
+# Target definitions
 BASE_TARGETS :=
 SERVER_TARGETS := 
 DESKTOP_TARGETS := 

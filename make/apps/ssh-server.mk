@@ -1,4 +1,4 @@
-SSH_SRC := ./share/ssh-server
+SSH_SRC := ./src/ssh-server
 SSH_TARGET := /etc/ssh
 SSH_CONFIGS := sshd_config TrustedUserCAKeys
 

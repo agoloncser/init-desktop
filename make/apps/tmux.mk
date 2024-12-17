@@ -8,5 +8,6 @@ ${PREFIX}/__tmux-switch-window.sh : ${SRCDIR}/tmux/bin/__tmux-switch-window.sh
 
 tmux: ${HOME}/.tmux.conf ${PREFIX}/__tmux-switch-window.sh
 
-COMMON_TARGETS += tmux
+DESKTOP_TARGETS += tmux
+SERVER_TARGETS += tmux
 HELP_TARGETS += tmux

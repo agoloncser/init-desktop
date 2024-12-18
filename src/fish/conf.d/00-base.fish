@@ -4,7 +4,6 @@ fish_add_path /Applications/Emacs.app/Contents/MacOS/bin
 fish_add_path $HOME/.local/bin
 fish_add_path /usr/local/sbin
 
-
 set EDITOR vi
 set PAGER less
 umask 0077

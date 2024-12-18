@@ -8,3 +8,4 @@ Ciphers aes256-ctr,aes192-ctr,aes128-ctr
 KexAlgorithms diffie-hellman-group-exchange-sha256
 MACs hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com
 TrustedUserCAKeys /etc/ssh/TrustedUserCAKeys
+Include /etc/ssh/conf.d/*.conf

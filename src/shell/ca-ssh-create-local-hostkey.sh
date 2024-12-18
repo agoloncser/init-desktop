@@ -10,7 +10,7 @@ CA_NAME=""
 FORCE_OVERWRITE=""
 CERT_VALID="-1m:+52w"
 CA_PATH_IN_PASS="ca-ssh"
-DOMAIN_LIST="be.mmegh.local me.mmegh.local mmegh.local tail6efd3.ts.net"
+DOMAIN_LIST="cs.mmegh.local be.mmegh.local me.mmegh.local mmegh.local tail6efd3.ts.net"
 CA_PUBKEY_PATH="$(mktemp)"
 
 _help(){
@@ -100,8 +100,9 @@ done
 
 if [ -e /etc/ssh/ssh_host_ed25519_key ] && [ -e /etc/ssh/ssh_host_ed25519_key-cert.pub ] ; then
     sudo bash <<EOF
-grep '^HostKey\ ' /etc/ssh/sshd_config || echo "HostKey /etc/ssh/ssh_host_ed25519_key" >> /etc/ssh/sshd_config
-grep '^HostCertificate\ ' /etc/ssh/sshd_config || echo "HostCertificate /etc/ssh/ssh_host_ed25519_key-cert.pub" >> /etc/ssh/sshd_config
+mkdir -p /etc/ssh/conf.d || true
+echo "HostKey /etc/ssh/ssh_host_ed25519_key" > /etc/ssh/conf.d/ca-ssh-hostkey.conf
+echo "HostCertificate /etc/ssh/ssh_host_ed25519_key-cert.pub" >> /etc/ssh/conf.d/ca-ssh-hostkey.conf
 EOF
 fi
 

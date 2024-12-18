@@ -45,17 +45,18 @@ PACKAGES = curl fish git tmux
 -include make/os/$(OS).mk
 -include make/distro/$(DISTRIBUTION).mk
 include versions.mk
-include make/apps/asdf.mk
-include make/apps/gh.mk
 include make/apps/1password.mk
-include make/apps/resilio.mk
-include make/apps/ssh-server.mk
-include make/apps/tailscale.mk
-include make/apps/warp.mk
+include make/apps/asdf.mk
 include make/apps/fish.mk
+include make/apps/gh.mk
 include make/apps/git.mk
 include make/apps/gpg.mk
+include make/apps/resilio.mk
+include make/apps/ssh-server.mk
+include make/apps/ssh.mk
+include make/apps/tailscale.mk
 include make/apps/tmux.mk
+include make/apps/warp.mk
 
 dev :
 	@install -m 0700 "share/commit-hook.sh" .git/hooks/prepare-commit-msg

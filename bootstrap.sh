@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 set -eu
 
@@ -10,6 +10,10 @@ case $(uname -s) in
         if [ -z "$ID" ] ; then
             echo "ERROR: Cannot detect distro."
         fi
+        [[ "$ID" == "raspbian"  ]] && {
+            sudo locale-gen en_US.UTF-8
+            sudo update-locale LANG=en_US.UTF-8
+        }
         case $ID in
             ubuntu|debian|raspbian)
                 sudo apt-get update

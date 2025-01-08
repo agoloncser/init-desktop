@@ -11,7 +11,7 @@ case $(uname -s) in
             echo "ERROR: Cannot detect distro."
         fi
         case $ID in
-            ubuntu)
+            ubuntu|debian|raspbian)
                 sudo apt-get update
                 sudo apt-get install -y git make
             ;;

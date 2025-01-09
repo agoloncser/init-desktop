@@ -1,5 +1,24 @@
 # Changelog
 
+## [0.24.0](https://github.com/agl4/init/compare/v0.23.1...v0.24.0) (2025-01-09)
+
+
+### Features
+
+* Add gpg support ([29e412e](https://github.com/agl4/init/commit/29e412e3321e0daf7ae1c28be80e5dd1b4434290))
+* Fish configuration ([3c82af7](https://github.com/agl4/init/commit/3c82af7c20015aaccccd909c02b38b0a37f4f8f4))
+* Git configuration ([ad14da0](https://github.com/agl4/init/commit/ad14da06ea97d5172bebca635e96815416bec556))
+* Install hunspell with dicts on macOS ([c05abe6](https://github.com/agl4/init/commit/c05abe651cc254bb2530c99335a9920fa12a149d))
+* Shell scripts ([59da6af](https://github.com/agl4/init/commit/59da6af50140e5037ddc124c09b54c334864a5a6))
+* tmux support ([74182ae](https://github.com/agl4/init/commit/74182ae822762cdca8ff40c743c7419d522d0250))
+
+
+### Bug Fixes
+
+* Correct vi binding ([335bcd0](https://github.com/agl4/init/commit/335bcd01e81b45301fae237a12a7f8dcda171baf))
+* Fix updating x86 macOS ([abec6c5](https://github.com/agl4/init/commit/abec6c53bfad8b36b963dc0b027ca95709b8de1d))
+* Run gnupg and git jobs as default ([888b42a](https://github.com/agl4/init/commit/888b42a37373f6fce0e449d06e3938c70a8ad252))
+
 ## [0.23.1](https://github.com/agl4/init/compare/v0.23.0...v0.23.1) (2024-11-12)
 
 
